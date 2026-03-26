@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Día ITC 2026 — El evento académico-tecnológico más importante de la UDEM. 21 de Abril 2026 · San Pedro Garza García, N.L. Registra tu lugar ahora." />
+  <meta name="theme-color" content="#0A0A0F" />
+  <meta property="og:type" content="event" />
+  <meta property="og:title" content="Día ITC 2026 — El futuro de la tecnología empieza aquí" />
+  <meta property="og:description"
+    content="El evento académico-tecnológico más importante de la UDEM. 21 de Abril 2026 · San Pedro Garza García, N.L." />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Event","name":"Día ITC 2026","startDate":"2026-04-21T09:00-06:00","endDate":"2026-04-21T17:00-06:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"UDEM Campus San Pedro — ESTOA Nivel B","address":{"@type":"PostalAddress","streetAddress":"Ave. Ignacio Morones Prieto 4500 Pte.","addressLocality":"San Pedro Garza García","addressRegion":"Nuevo León","addressCountry":"MX"}},"organizer":{"@type":"Organization","name":"SAITC — Sociedad de Alumnos ITC UDEM"},"isAccessibleForFree":true,"maximumAttendeeCapacity":250}
+  </script>
+  <title>Día ITC 2026 — El futuro de la tecnología empieza aquí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav__brand">
+      <span class="nav__logo">DÍA<span class="accent">ITC</span></span>
+      <span class="nav__year">2026</span>
+    </div>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false"
+      aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__menu" id="navMenu" role="list">
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer"
+          class="nav__link">Registro</a></li>
+      <li><a href="#speakers" class="nav__link">Speakers</a></li>
+      <li><a href="#agenda" class="nav__link">Agenda</a></li>
+      <li><a href="#sponsors" class="nav__link">Sponsors</a></li>
+      <li><a href="#ubicacion" class="nav__link">Ubicación</a></li>
+      <li><a href="#faqs" class="nav__link">FAQs</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer"
+          class="btn btn--sm btn--primary nav__cta">Registrarme</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE STICKY CTA -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer" class="sticky-cta"
+    id="stickyCTA" aria-label="Registrarme en el evento">Confirmar asistencia →</a>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero" aria-labelledby="heroHeadline">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-up">SAITC PRESENTA</p>
+      <h1 class="hero__title reveal-up" id="heroHeadline">
+        <span class="hero__title-dia">DÍA</span>
+        <span class="hero__title-itc">ITC</span>
+        <span class="hero__title-year">2026</span>
+      </h1>
+      <p class="hero__tagline reveal-up">El futuro de la tecnología empieza aquí.</p>
+      <p class="hero__meta reveal-up">
+        <span class="hero__date-badge">21 de Abril · 8:30 AM–5 PM</span>
+        <span class="hero__location">ESTOA Nivel B, Salas 7, 8 y 9 · UDEM, San Pedro Garza García</span>
+        <span class="hero__ticket-price" aria-label="Costo del boleto: $100 pesos mexicanos">
+          🎟️ Boleto <strong>$100 MXN</strong>
+          <span class="hero__ticket-perks">· Comida &amp; Catering · Acceso total · Rifa de premios</span>
+        </span>
+      </p>
+      <div class="hero__ctas reveal-up">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer"
+          class="btn btn--primary btn--lg">Registrarme →</a>
+        <a href="#agenda" class="btn btn--ghost btn--lg">Ver agenda</a>
+      </div>
+      <div class="hero__motto reveal-up" aria-label="Inspirando. Transformando. Conectando.">
+        <span>--INSPIRANDO.</span>
+        <span>----TRANSFORMANDO.</span>
+        <span>------CONECTANDO.</span>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STATS BAND ═══════════ -->
+  <section class="stats-band" aria-label="Estadísticas del evento">
+    <div class="container stats-band__grid">
+      <div class="stat-item reveal-up">
+        <span class="stat-item__number" data-target="250">0</span>
+        <span class="stat-item__label">Lugares disponibles</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__number" data-target="10">0</span>
+        <span class="stat-item__label">Speakers</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__number" data-target="4">0</span>
+        <span class="stat-item__label">Tracks simultáneos</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__number" data-target="8">0</span>
+        <span class="stat-item__label">Horas de contenido</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ SPEAKERS — CAROUSEL ═══════════ -->
+  <section class="section speakers" id="speakers" aria-labelledby="speakersHeading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 / SPEAKERS</span>
+        <h2 class="section-title" id="speakersHeading">Ponentes</h2>
+        <p class="section-subtitle">Líderes de la industria tech compartiendo su visión del futuro.</p>
+      </div>
+    </div>
+
+    <div class="sc-wrap reveal-up">
+      <button class="sc-arrow sc-arrow--prev" id="scPrev" aria-label="Speaker anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" width="20" height="20">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="sc-arrow sc-arrow--next" id="scNext" aria-label="Speaker siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" width="20" height="20">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+
+      <div class="sc-viewport">
+        <div class="sc-track" id="scTrack">
+
+          <!-- Adrián Treviño — Apertura -->
+          <article class="sc-card" data-index="0" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#6C63FF,#a855f7)">
+              <img src="Speakers/adrianTrevino.jpeg" alt="Adrián Treviño" loading="eager">
+            </div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-main">Escenario Principal</span>
+              <h3 class="sc-card__name">Adrián Treviño</h3>
+              <p class="sc-card__company">AstraZeneca</p>
+              <p class="sc-card__role">Industry Leader</p>
+              <p class="sc-card__bio">Charla magistral de apertura. Perspectiva desde la industria farmacéutica-tecnológica y el impacto de la IA en sectores no tradicionales.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🎤 Charla de Apertura</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Beatriz Barrera — Bloque 1, Sala A -->
+          <article class="sc-card" data-index="1" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#7C3AED,#06b6d4)"><span>BB</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-a">Sala A — Bloque 1</span>
+              <h3 class="sc-card__name">Beatriz Barrera</h3>
+              <p class="sc-card__company">IA / Cloud</p>
+              <p class="sc-card__role">Cloud & AI Specialist</p>
+              <p class="sc-card__bio">Speaker especializada en Inteligencia Artificial y Cloud Computing con experiencia aplicada en la industria.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🤖 IA & Cloud Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Arturo Gallart — Bloque 1, Sala B -->
+          <article class="sc-card" data-index="2" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#FF9900,#e65c00)">
+              <img src="Speakers/tato.jpeg" alt="Arturo Gallart" loading="lazy">
+            </div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-b">Sala B — Bloque 1</span>
+              <h3 class="sc-card__name">Arturo Gallart</h3>
+              <p class="sc-card__company">Amazon Web Services (AWS)</p>
+              <p class="sc-card__role">Cloud / Security Engineer</p>
+              <p class="sc-card__bio">Especialista en seguridad y DevOps en AWS. Comparte casos reales de arquitecturas cloud seguras y buenas prácticas de ciberseguridad.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🔐 DevOps & CyberSec Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Karla Zapata — Bloque 1, Sala C -->
+          <article class="sc-card" data-index="3" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#f59e0b,#ef4444)"><span>KZ</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-c">Sala C — Bloque 1</span>
+              <h3 class="sc-card__name">Karla Zapata</h3>
+              <p class="sc-card__company">Inclusión & Ética Tech</p>
+              <p class="sc-card__role">Ethics & Diversity Leader</p>
+              <p class="sc-card__bio">Charla sobre inclusión, visibilidad y ética en la tecnología. Perspectivas clave para construir carreras más humanas en el sector tech.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">⚖️ Inclusión & Ética Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mauro Delboy — Bloque 2, Sala A -->
+          <article class="sc-card" data-index="4" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#0078D4,#00c6ff)">
+              <img src="Speakers/mauroDelboy.jpeg" alt="Mauro Delboy" loading="lazy">
+            </div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-a">Sala A — Bloque 2</span>
+              <h3 class="sc-card__name">Mauro Delboy</h3>
+              <p class="sc-card__company">ACM</p>
+              <p class="sc-card__role">AI / Cloud Expert</p>
+              <p class="sc-card__bio">Ponencia sobre tendencias emergentes en inteligencia artificial y cómputo en la nube desde la perspectiva ACM.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🤖 IA & Cloud Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Eli Emmanuel Ruiz Avilés — Bloque 2, Sala B -->
+          <article class="sc-card" data-index="5" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#059669,#6C63FF)">
+              <img src="Speakers/eliEmmanuel.jpeg" alt="Eli Emmanuel Ruiz Avilés" loading="lazy">
+            </div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-b">Sala B — Bloque 2</span>
+              <h3 class="sc-card__name">Eli Emmanuel Ruiz Avilés</h3>
+              <p class="sc-card__company">ACM</p>
+              <p class="sc-card__role">DevOps / CyberSec Expert</p>
+              <p class="sc-card__bio">Experto en seguridad y operaciones DevOps. Casos prácticos y estrategias de defensa en entornos empresariales modernos.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🔐 DevOps & CyberSec Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WIE — Bloque 2, Sala C -->
+          <article class="sc-card" data-index="6" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#db2777,#9333ea)"><span>WIE</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-c">Sala C — Bloque 2</span>
+              <h3 class="sc-card__name">IEEE WIE</h3>
+              <p class="sc-card__company">Women in Engineering</p>
+              <p class="sc-card__role">Inclusión & Visibilidad</p>
+              <p class="sc-card__bio">Women in Engineering — IEEE. Sesión sobre visibilidad femenina en ingeniería, liderazgo y cómo cerrar la brecha de género en tech.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">⚖️ Inclusión & Ética Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Santiago Reyes Chávez — Bloque 3, Sala A -->
+          <article class="sc-card" data-index="7" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#008FD3,#00C4CC)"><span>SR</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-a">Sala A — Bloque 3</span>
+              <h3 class="sc-card__name">Santiago Reyes Chávez</h3>
+              <p class="sc-card__company">SAP</p>
+              <p class="sc-card__role">Cloud / AI Specialist</p>
+              <p class="sc-card__bio">Charla avanzada de IA y Cloud desde la perspectiva de SAP. Casos de uso empresariales y ecosistemas cloud modernos.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🤖 IA & Cloud Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pedro Arredondo — Bloque 3, Sala B -->
+          <article class="sc-card" data-index="8" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#a3335f,#6C63FF)"><span>PA</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-b">Sala B — Bloque 3</span>
+              <h3 class="sc-card__name">Pedro Arredondo</h3>
+              <p class="sc-card__company">Accenture</p>
+              <p class="sc-card__role">DevOps / Security Consultant</p>
+              <p class="sc-card__bio">Consultor en DevOps y ciberseguridad en Accenture. Metodologías reales aplicadas en proyectos de transformación digital.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🔐 DevOps & CyberSec Track</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hexaware — Bloque 3, Sala C -->
+          <article class="sc-card" data-index="9" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#06b6d4,#6C63FF)"><span>HX</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-c">Sala C — Bloque 3</span>
+              <h3 class="sc-card__name">Representante Hexaware</h3>
+              <p class="sc-card__company">Hexaware Technologies</p>
+              <p class="sc-card__role">Tech Specialist</p>
+              <p class="sc-card__bio">Caso real de consultoría tecnológica y transformación digital. Empleabilidad y trayectorias tech para egresados de ingeniería.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">💼 Empleabilidad & Tech Careers</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rodolfo Flores / Ramiro Patiño — Bloque 4, Sala A -->
+          <article class="sc-card" data-index="10" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#00d4fe,#29ABE2)"><span>RF</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-a">Sala A — Bloque 4</span>
+              <h3 class="sc-card__name">Rodolfo Flores &amp; Ramiro Patiño</h3>
+              <p class="sc-card__company">Snowflake</p>
+              <p class="sc-card__role">Data / Cloud Engineers</p>
+              <p class="sc-card__bio">Panel de cierre sobre el futuro de la IA y el cómputo en la nube. Perspectiva desde Snowflake sobre data platforms y analítica moderna.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🤖 IA & Cloud — Panel Final</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ivan de Oca — Bloque 4, Sala B -->
+          <article class="sc-card" data-index="11" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#008FD3,#003f7f)"><span>IO</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-b">Sala B — Bloque 4</span>
+              <h3 class="sc-card__name">Ivan de Oca</h3>
+              <p class="sc-card__company">SAP</p>
+              <p class="sc-card__role">DevOps / Security Expert</p>
+              <p class="sc-card__bio">Panel de cierre sobre seguridad en entornos DevOps modernos. Experiencia directa en proyectos empresariales de alto impacto con SAP.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">🔐 DevOps & CyberSec — Panel Final</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Erasmo Hernández — Bloque 4, Sala C -->
+          <article class="sc-card" data-index="12" tabindex="0">
+            <div class="sc-card__av" style="--g:linear-gradient(135deg,#f59e0b,#008FD3)"><span>EH</span></div>
+            <div class="sc-card__body">
+              <span class="sc-card__badge track-c">Sala C — Bloque 4</span>
+              <h3 class="sc-card__name">Erasmo Hernández</h3>
+              <p class="sc-card__company">SAP</p>
+              <p class="sc-card__role">Inclusion & Ethics Specialist</p>
+              <p class="sc-card__bio">Panel de cierre sobre ética en IA, inclusión y trayectorias de carrera para ingenieros. Perspectiva desde SAP sobre empleabilidad tech.</p>
+              <div class="sc-card__footer">
+                <span class="sc-card__talk">⚖️ Inclusión & Ética — Panel Final</span>
+                <a href="#agenda" class="btn btn--ghost btn--sm">Ver en agenda →</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /sc-track -->
+
+      </div><!-- /sc-viewport -->
+
+      <div class="sc-dots" id="scDots" role="tablist" aria-label="Navegar speaker"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ AGENDA — TABLE STYLE ═══════════ -->
+  <section class="section agenda" id="agenda" aria-labelledby="agendaHeading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 / AGENDA</span>
+        <h2 class="section-title" id="agendaHeading">Agenda</h2>
+        <p class="section-subtitle">Un día completo de <span class="text-accent">aprendizaje</span> y <span
+            class="text-lime">networking</span></p>
+      </div>
+
+      <div class="agenda-meta reveal-up">
+        <span class="agenda-date-pill">
+          <span class="agenda-date-dot"></span>
+          21 DE ABRIL, 2026 &nbsp;·&nbsp; TU ZONA HORARIA: AMERICA/MONTERREY
+        </span>
+      </div>
+
+      <!-- Track filter tabs -->
+      <div class="agenda-tabs reveal-up" role="tablist" aria-label="Filtrar por track">
+        <button class="agenda-tab active" data-track="all" role="tab" aria-selected="true">Todos</button>
+        <button class="agenda-tab" data-track="main" role="tab" aria-selected="false">Main Stage</button>
+        <button class="agenda-tab" data-track="sala-a" role="tab" aria-selected="false">Sala A — IA / Cloud</button>
+        <button class="agenda-tab" data-track="sala-b" role="tab" aria-selected="false">Sala B — DevOps /
+          CyberSec</button>
+        <button class="agenda-tab" data-track="sala-c" role="tab" aria-selected="false">Sala C — Ética /
+          Empleabilidad</button>
+      </div>
+
+      <!-- Table -->
+      <div class="agenda-table reveal-up" role="table" aria-label="Programa del evento">
+        <div class="agenda-table__head" role="row">
+          <span role="columnheader">HORA</span>
+          <span role="columnheader">SPEAKER</span>
+          <span role="columnheader">CHARLA</span>
+        </div>
+
+        <!-- Rows -->
+        <div class="ag-row" data-track="main" data-block="always" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-time">8:30</span>
+            <span class="ag-dur">40 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-speaker-dash">—</span>
+            <span class="ag-speaker-role">SAITC</span>
+          </div>
+          <div class="ag-row__talk" role="cell">Registro</div>
+        </div>
+
+        <div class="ag-row ag-row--featured" data-track="main" data-block="always" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-dot ag-dot--accent"></span>
+            <span class="ag-time">9:30</span>
+            <span class="ag-dur">30 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-speaker-name">SAITC · DPA</span>
+            <span class="ag-speaker-role">Bienvenida</span>
+          </div>
+          <div class="ag-row__talk ag-row__talk--bold" role="cell">Ceremonia de Apertura</div>
+        </div>
+
+        <div class="ag-row" data-track="main" data-block="always" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-dot ag-dot--lime"></span>
+            <span class="ag-time">10:00</span>
+            <span class="ag-dur">50 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-speaker-name">Adrián Treviño</span>
+            <span class="ag-speaker-role">AstraZeneca</span>
+          </div>
+          <div class="ag-row__talk ag-row__talk--bold" role="cell">Charla Magistral de Apertura</div>
+        </div>
+
+        <!-- ─── BLOQUE 1 — 11:00 ─── -->
+        <!-- Vista "Todos": resumen de tracks simultáneos -->
+        <div class="ag-row ag-row--block" data-track="all" data-block="summary" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-time">11:00</span>
+            <span class="ag-dur">50 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-block-label">BLOQUE 1</span>
+          </div>
+          <div class="ag-row__talk" role="cell">
+            <div class="ag-block-tracks">
+              <span class="agenda-tab-pill track-a">Sala A — IA / Cloud</span>
+              <span class="agenda-tab-pill track-b">Sala B — DevOps / CyberSec</span>
+              <span class="agenda-tab-pill track-c">Sala C — Ética / Empleabilidad</span>
+              <span class="agenda-tab-pill track-main">Escenario — Proyectos Ing. Software</span>
+            </div>
+          </div>
+        </div>
+        <!-- Vista por sala: filas individuales Bloque 1 -->
+        <div class="ag-row" data-track="sala-a" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">11:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Beatriz Barrera</span><span class="ag-speaker-role">IA / Cloud Specialist</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-a" style="margin-right:8px">Sala A</span>IA &amp; Cloud Computing — por confirmar tema</div>
+        </div>
+        <div class="ag-row" data-track="sala-b" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">11:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Arturo Gallart</span><span class="ag-speaker-role">Amazon Web Services (AWS)</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-b" style="margin-right:8px">Sala B</span>DevOps &amp; Ciberseguridad en AWS</div>
+        </div>
+        <div class="ag-row" data-track="sala-c" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">11:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Karla Zapata</span><span class="ag-speaker-role">Inclusión &amp; Ética Tech</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-c" style="margin-right:8px">Sala C</span>Inclusión, Visibilidad y Ética Tecnológica</div>
+        </div>
+        <div class="ag-row ag-row--featured" data-track="main" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">11:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Alumnos ITC</span><span class="ag-speaker-role">Escenario Principal</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-main" style="margin-right:8px">Main Stage</span>🎓 Presentación de Proyectos de Alumnos — Bloque 1</div>
+        </div>
+
+        <!-- ─── BLOQUE 2 — 12:00 ─── -->
+        <div class="ag-row ag-row--block" data-track="all" data-block="summary" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-time">12:00</span>
+            <span class="ag-dur">50 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-block-label">BLOQUE 2</span>
+          </div>
+          <div class="ag-row__talk" role="cell">
+            <div class="ag-block-tracks">
+              <span class="agenda-tab-pill track-a">Sala A — IA / Cloud</span>
+              <span class="agenda-tab-pill track-b">Sala B — DevOps / CyberSec</span>
+              <span class="agenda-tab-pill track-c">Sala C — Ética / Empleabilidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="ag-row" data-track="sala-a" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">12:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Mauro Delboy</span><span class="ag-speaker-role">ACM</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-a" style="margin-right:8px">Sala A</span>Tendencias en IA y Cloud Computing — ACM</div>
+        </div>
+        <div class="ag-row" data-track="sala-b" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">12:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Eli Emmanuel Ruiz Avilés</span><span class="ag-speaker-role">ACM</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-b" style="margin-right:8px">Sala B</span>DevOps &amp; CyberSec en entornos modernos — ACM</div>
+        </div>
+        <div class="ag-row" data-track="sala-c" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">12:00</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">IEEE WIE</span><span class="ag-speaker-role">Women in Engineering</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-c" style="margin-right:8px">Sala C</span>Visibilidad femenina en ingeniería y liderazgo tech</div>
+        </div>
+
+        <!-- Comida & Networking -->
+        <div class="ag-row ag-row--break" data-track="all" data-block="always" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-dot ag-dot--lime"></span>
+            <span class="ag-time">13:00</span>
+            <span class="ag-dur">80 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-speaker-name">Stands activos</span>
+            <span class="ag-speaker-role">Área de Networking</span>
+          </div>
+          <div class="ag-row__talk ag-row__talk--bold" role="cell">🍕 Comida &amp; Networking</div>
+        </div>
+
+        <!-- ─── BLOQUE 3 — 14:30 ─── -->
+        <div class="ag-row ag-row--block" data-track="all" data-block="summary" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-time">14:30</span>
+            <span class="ag-dur">50 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-block-label">BLOQUE 3</span>
+          </div>
+          <div class="ag-row__talk" role="cell">
+            <div class="ag-block-tracks">
+              <span class="agenda-tab-pill track-a">Sala A — IA / Cloud</span>
+              <span class="agenda-tab-pill track-b">Sala B — DevOps / CyberSec</span>
+              <span class="agenda-tab-pill track-c">Sala C — Hexaware Tech</span>
+              <span class="agenda-tab-pill track-main">Escenario — Proyectos BDA</span>
+            </div>
+          </div>
+        </div>
+        <div class="ag-row" data-track="sala-a" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">14:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Santiago Reyes Chávez</span><span class="ag-speaker-role">SAP</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-a" style="margin-right:8px">Sala A</span>IA &amp; Cloud avanzado — SAP</div>
+        </div>
+        <div class="ag-row" data-track="sala-b" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">14:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Pedro Arredondo</span><span class="ag-speaker-role">Accenture</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-b" style="margin-right:8px">Sala B</span>DevOps &amp; CyberSec en proyectos de transformación digital</div>
+        </div>
+        <div class="ag-row" data-track="sala-c" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">14:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Representante Hexaware</span><span class="ag-speaker-role">Hexaware Technologies</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-c" style="margin-right:8px">Sala C</span>Caso real: consultoría tecnológica y transformación digital</div>
+        </div>
+        <div class="ag-row ag-row--featured" data-track="main" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">14:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Alumnos ITC</span><span class="ag-speaker-role">Escenario Principal</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-main" style="margin-right:8px">Main Stage</span>🎓 Presentación de Proyectos de Alumnos — Bloque 2</div>
+        </div>
+
+        <!-- ─── BLOQUE 4 — 15:30 ─── -->
+        <div class="ag-row ag-row--block" data-track="all" data-block="summary" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-time">15:30</span>
+            <span class="ag-dur">50 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-block-label">BLOQUE 4</span>
+          </div>
+          <div class="ag-row__talk" role="cell">
+            <div class="ag-block-tracks">
+              <span class="agenda-tab-pill track-a">Sala A — IA / Cloud</span>
+              <span class="agenda-tab-pill track-b">Sala B — DevOps / CyberSec</span>
+              <span class="agenda-tab-pill track-c">Sala C — Ética / Empleabilidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="ag-row" data-track="sala-a" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">15:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Rodolfo Flores &amp; Ramiro Patiño</span><span class="ag-speaker-role">Snowflake</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-a" style="margin-right:8px">Sala A</span>Panel: Futuro de la IA &amp; Data Platforms — Snowflake</div>
+        </div>
+        <div class="ag-row" data-track="sala-b" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">15:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Ivan de Oca</span><span class="ag-speaker-role">SAP</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-b" style="margin-right:8px">Sala B</span>Panel: Seguridad en entornos DevOps modernos — SAP</div>
+        </div>
+        <div class="ag-row" data-track="sala-c" data-block="detail" role="row">
+          <div class="ag-row__time" role="cell"><span class="ag-time">15:30</span><span class="ag-dur">50 min</span></div>
+          <div class="ag-row__speaker" role="cell"><span class="ag-speaker-name">Erasmo Hernández</span><span class="ag-speaker-role">SAP</span></div>
+          <div class="ag-row__talk" role="cell"><span class="agenda-tab-pill track-c" style="margin-right:8px">Sala C</span>Panel: Ética en IA, inclusión y trayectorias de carrera — SAP</div>
+        </div>
+
+        <!-- Cierre -->
+        <div class="ag-row ag-row--featured" data-track="all" data-block="always" role="row">
+          <div class="ag-row__time" role="cell">
+            <span class="ag-dot ag-dot--accent"></span>
+            <span class="ag-time">16:30</span>
+            <span class="ag-dur">30 min</span>
+          </div>
+          <div class="ag-row__speaker" role="cell">
+            <span class="ag-speaker-name">SAITC</span>
+            <span class="ag-speaker-role">Cierre oficial</span>
+          </div>
+          <div class="ag-row__talk ag-row__talk--bold" role="cell">🎁 Cierre &amp; Rifa de Premios</div>
+        </div>
+
+      </div><!-- /agenda-table -->
+
+    </div>
+  </section>
+
+  <!-- ═══════════ SPONSORS — LOGO CARDS ═══════════ -->
+  <section class="section sponsors" id="sponsors" aria-labelledby="sponsorsHeading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 / SPONSORS</span>
+        <h2 class="section-title" id="sponsorsHeading">Patrocinadores</h2>
+        <p class="section-subtitle">Empresas que hacen posible el Día ITC 2026.</p>
+      </div>
+
+      <div class="sp-grid reveal-up">
+        <a href="https://www.astrazeneca.com" target="_blank" rel="noopener noreferrer" class="sp-card"
+          aria-label="AstraZeneca">
+          <div class="sp-card__logo" aria-hidden="true">
+            <span style="font-size:2.2rem;font-weight:800;letter-spacing:-0.04em;color:#fff;">Az</span>
+          </div>
+          <span class="sp-card__name" style="color:var(--color-accent-light)">AstraZeneca</span>
+        </a>
+        <a href="https://www.hexaware.com" target="_blank" rel="noopener noreferrer" class="sp-card"
+          aria-label="Hexaware Technologies">
+          <div class="sp-card__logo" aria-hidden="true">
+            <span style="font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;color:#fff;">HEX</span>
+          </div>
+          <span class="sp-card__name" style="color:var(--color-cyan)">Hexaware</span>
+        </a>
+        <a href="https://www.instagram.com/aws.cloud.club.udem/" target="_blank" rel="noopener noreferrer" class="sp-card" aria-label="Club AWS UDEM">
+          <div class="sp-card__logo" aria-hidden="true">
+            <span style="font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;color:#FF9900;">AWS</span>
+          </div>
+          <span class="sp-card__name" style="color:#FF9900">Club AWS UDEM</span>
+        </a>
+        <div class="sp-card" aria-label="SAP">
+          <div class="sp-card__logo" aria-hidden="true">
+            <span style="font-size:2rem;font-weight:900;letter-spacing:-0.04em;color:#008FD3;">SAP</span>
+          </div>
+          <span class="sp-card__name" style="color:#008FD3">SAP</span>
+        </div>
+        <div class="sp-card" aria-label="FEUDEM">
+          <div class="sp-card__logo" aria-hidden="true">
+            <span style="font-size:1.2rem;font-weight:900;letter-spacing:-0.03em;color:#C8FF00;">FEUDEM</span>
+          </div>
+          <span class="sp-card__name" style="color:var(--color-lime)">FEUDEM · UDEM</span>
+        </div>
+      </div>
+
+
+      <!-- ── Premium Sponsor CTA banner ── -->
+      <div class="sponsor-banner reveal-up" role="complementary" aria-label="Conviértete en patrocinador">
+        <div class="sponsor-banner__bg" aria-hidden="true"></div>
+        <div class="sponsor-banner__content">
+          <div class="sponsor-banner__left">
+            <span class="sponsor-banner__tag">📣 ÚNETE COMO PATROCINADOR</span>
+            <h3 class="sponsor-banner__title">¿Tu empresa quiere estar<br>en el centro de la escena tech?</h3>
+            <ul class="sponsor-banner__perks" aria-label="Beneficios de patrocinar">
+              <li>🎯 Exposición directa a <strong>+250 estudiantes</strong> de ITC, TEC y UANL</li>
+              <li>🏆 Logo en todos los materiales y pantallas del evento</li>
+              <li>🤝 Espacio para stands, demos y reclutamiento en vivo</li>
+            </ul>
+          </div>
+          <div class="sponsor-banner__right">
+            <a href="https://www.instagram.com/saitcudem/" target="_blank" rel="noopener noreferrer"
+              class="btn btn--primary btn--lg sponsor-banner__cta" aria-label="Contáctanos en Instagram para patrocinar">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Contáctanos en Instagram
+            </a>
+            <p class="sponsor-banner__sub">Respondemos en menos de 24 h</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ UBICACIÓN — CIRCULAR MAP ═══════════ -->
+  <section class="section ubicacion" id="ubicacion" aria-labelledby="ubicacionHeading">
+    <div class="container">
+      <div class="section-header section-header--left reveal-up">
+        <span class="section-tag">05 / UBICACIÓN</span>
+        <h2 class="section-title" id="ubicacionHeading">Ubicación</h2>
+        <p class="section-subtitle section-subtitle--left">Nos vemos en <span class="text-accent">San Pedro Garza
+            García,</span> <span class="text-lime">Nuevo León</span></p>
+      </div>
+
+      <div class="ubicacion-layout reveal-up">
+        <!-- Circular map bubble -->
+        <div class="ubicacion-globe-wrap">
+          <div class="ubicacion-venue-label" aria-hidden="true">UDEM — CAMPUS SAN PEDRO<br>ESTOA NIVEL B, SALAS 7, 8 Y 9
+          </div>
+          <div class="ubicacion-globe">
+            <iframe class="ubicacion-iframe" title="Mapa UDEM Campus San Pedro" loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.3!2d-100.3942!3d25.6607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662953ec6b7af35%3A0x5a5a5a5a5a5a5a5a!2sUniversidad+de+Monterrey!5e0!3m2!1ses!2smx!4v1680000000000"
+              allowfullscreen="" aria-label="Mapa de UDEM San Pedro Garza García"></iframe>
+          </div>
+          <div class="ubicacion-pin-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                fill="var(--color-accent)" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Info panel -->
+        <div class="ubicacion-info-panel">
+          <div class="ubicacion-info-row">
+            <span class="ubicacion-info-icon">🏛️</span>
+            <div>
+              <p class="ubicacion-info-label">Venue</p>
+              <p class="ubicacion-info-value">UDEM — ESTOA Nivel B</p>
+              <p class="ubicacion-info-sub">Salas 7, 8 y 9</p>
+            </div>
+          </div>
+          <div class="ubicacion-info-row">
+            <span class="ubicacion-info-icon">📍</span>
+            <div>
+              <p class="ubicacion-info-label">Dirección</p>
+              <p class="ubicacion-info-value">Ave. Ignacio Morones Prieto 4500 Pte.</p>
+              <p class="ubicacion-info-sub">San Pedro Garza García, N.L.</p>
+            </div>
+          </div>
+          <div class="ubicacion-info-row">
+            <span class="ubicacion-info-icon">📅</span>
+            <div>
+              <p class="ubicacion-info-label">Fecha y hora</p>
+              <p class="ubicacion-info-value">21 de Abril 2026</p>
+              <p class="ubicacion-info-sub">9:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=UDEM+San+Pedro+Garza+Garcia+Nuevo+Leon" target="_blank"
+            rel="noopener noreferrer" class="btn btn--primary btn--lg ubicacion-cta">
+            Abrir en Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COLABORADORES — LOGO CARDS ═══════════ -->
+  <section class="section colaboradores" id="colaboradores" aria-labelledby="colaboradoresHeading">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">06 / COMUNIDAD</span>
+        <h2 class="section-title section-title--sm" id="colaboradoresHeading">Colaboradores & Comunidad</h2>
+        <p class="section-subtitle">La red estudiantil que hace posible este evento.</p>
+      </div>
+
+      <div class="colab-grid reveal-up">
+
+        <div class="colab-card">
+          <div class="colab-card__img" aria-hidden="true">
+            <span style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:#0078D4">ACM</span>
+          </div>
+          <span class="colab-card__name">ACM — UDEM</span>
+          <span class="colab-card__role">Association for Computing Machinery · UDEM</span>
+        </div>
+
+        <div class="colab-card">
+          <div class="colab-card__img" aria-hidden="true">
+            <span style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:#E53935">HERC</span>
+          </div>
+          <span class="colab-card__name">HERC UDEM</span>
+          <span class="colab-card__role">Human Exploration Rover Challenge · UDEM</span>
+        </div>
+
+        <div class="colab-card">
+          <div class="colab-card__img" aria-hidden="true">
+            <span style="font-size:1.6rem;font-weight:800;letter-spacing:-.02em;color:var(--color-cyan)">ERA</span>
+          </div>
+          <span class="colab-card__name">ERA UDEM</span>
+          <span class="colab-card__role">Engineering Research Association · UDEM</span>
+        </div>
+
+        <div class="colab-card">
+          <div class="colab-card__img" aria-hidden="true">
+            <span style="font-size:1.1rem;font-weight:800;letter-spacing:-.02em;color:var(--color-lime);text-align:center;line-height:1.2">CPC</span>
+          </div>
+          <span class="colab-card__name">Club de Prog. Competitiva</span>
+          <span class="colab-card__role">Programación Competitiva · UDEM</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQs ═══════════ -->
+  <section class="section faqs" id="faqs" aria-labelledby="faqsHeading">
+    <div class="container container--narrow">
+      <div class="section-header reveal-up">
+        <span class="section-tag">07 / FAQs</span>
+        <h2 class="section-title" id="faqsHeading">Preguntas frecuentes</h2>
+        <p class="section-subtitle">Todo lo que necesitas saber antes de registrarte.</p>
+      </div>
+      <dl class="faq-list reveal-up">
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-1-a">¿Cuánto cuesta el boleto y qué incluye?<span
+                class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-1-a">
+            El boleto tiene un costo de <strong>$100 MXN</strong> e incluye:
+            <ul style="margin-top:8px;padding-left:1.2em;display:flex;flex-direction:column;gap:4px">
+              <li>🍽️ <strong>Comida y Catering</strong> del mediodía</li>
+              <li>🎤 <strong>Acceso a todas las sesiones</strong> y tracks simultáneos</li>
+              <li>🎁 <strong>Participación en la rifa de premios</strong> al cierre</li>
+            </ul>
+          </dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-2-a">¿Quién puede asistir?<span
+                class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-2-a">Principalmente estudiantes de ITC de UDEM, TEC de Monterrey y UANL.
+            También hay espacio para invitados de otras instituciones.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-3-a">¿Necesito registrarme con
+              anticipación?<span class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-3-a">Sí, los lugares son limitados a 250 participantes. Te recomendamos
+            registrarte lo antes posible.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-4-a">¿Hay certificado de
+              asistencia?<span class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-4-a">Esta información se confirmará próximamente. Los registrados
+            recibirán actualizaciones por correo.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-5-a">¿Los talleres requieren
+              preparación previa?<span class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-5-a">Sí. Se enviará información técnica a los registrados con
+            anticipación. Usa un correo institucional válido.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-6-a">¿Puedo asistir solo a algunas
+              sesiones?<span class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-6-a">Sí. Puedes moverte libremente entre las salas durante los bloques
+            simultáneos.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-7-a">¿Habrá comida?<span
+                class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-7-a">Sí, hay un bloque de comida de 1:00 a 2:20 PM con networking activo
+            y stands empresariales.</dd>
+        </div>
+        <div class="faq-item">
+          <dt><button class="faq-trigger" aria-expanded="false" aria-controls="faq-8-a">¿Puedo ir aunque no sea de
+              UDEM?<span class="faq-icon" aria-hidden="true">+</span></button></dt>
+          <dd class="faq-answer hidden" id="faq-8-a">Sí. Hay cupo para invitados de TEC y UANL, y de otras universidades
+            de la región.</dd>
+        </div>
+      </dl>
+      <div class="faqs-cta reveal-up">
+        <p>¿Tienes otra pregunta?</p>
+        <a href="mailto:saitc@udem.edu.mx" class="btn btn--ghost">Escríbenos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">DÍA<span class="accent">ITC</span> <span
+              class="footer__year-tag">2026</span></span>
+          <p class="footer__tagline">El futuro de la tecnología empieza aquí.</p>
+          <div class="footer__socials" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/saitcudem/" target="_blank" rel="noopener noreferrer"
+              class="footer__social-link" aria-label="Instagram SAITC">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Navegación del footer">
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Evento</h4>
+            <ul role="list">
+              <li><a href="#registro">Registro</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#agenda">Agenda</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Info</h4>
+            <ul role="list">
+              <li><a href="#sponsors">Sponsors</a></li>
+              <li><a href="#ubicacion">Ubicación</a></li>
+              <li><a href="#colaboradores">Colaboradores</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Contacto</h4>
+            <ul role="list">
+              <li><a href="mailto:saitc@udem.edu.mx">saitc@udem.edu.mx</a></li>
+              <li><a href="https://www.instagram.com/saitcudem/" target="_blank" rel="noopener noreferrer">@saitc_udem</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 SAITC — Universidad de Monterrey. Organizado con 💜 por estudiantes de ITC.</p>
+        <p class="footer__legal">Evento gratuito · 250 lugares disponibles · San Pedro Garza García, N.L.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
