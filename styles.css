@@ -1708,3 +1708,167 @@ a.nav__brand {
     transition: none;
   }
 }
+
+/* ════════════════════════════════
+   SPEAKER CARD — Cyber 3D Tilt Effect
+   JS-driven tilt + CSS cyber visual elements
+   Colors: lime #C8FF00, purple #6C63FF, cyan #06b6d4
+   ════════════════════════════════ */
+
+/* Card 3D perspective wrapper */
+.sc-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 700ms ease;
+}
+.sc-card.tilting {
+  transition: transform 125ms ease-in-out;
+}
+
+/* — Glare overlay — */
+.sc-card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    125deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.04) 45%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.04) 55%,
+    rgba(255,255,255,0) 100%
+  );
+  opacity: 0;
+  transition: opacity 300ms;
+  pointer-events: none;
+  z-index: 5;
+}
+.sc-card:hover .sc-card-glare { opacity: 1; }
+
+/* — Scan line — */
+.sc-scan-line {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, transparent, rgba(108,99,255,0.12), transparent);
+  transform: translateY(-100%);
+  animation: scScanMove 2.5s linear infinite;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+@keyframes scScanMove {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+/* — Cyber corner brackets — */
+.sc-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+.sc-corners span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(108,99,255,0.35);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.sc-card:hover .sc-corners span {
+  border-color: rgba(108,99,255,0.85);
+  box-shadow: 0 0 8px rgba(108,99,255,0.5);
+}
+.sc-corners span:nth-child(1) { top:10px;    left:10px;  border-right:0; border-bottom:0; }
+.sc-corners span:nth-child(2) { top:10px;    right:10px; border-left:0;  border-bottom:0; }
+.sc-corners span:nth-child(3) { bottom:10px; left:10px;  border-right:0; border-top:0; }
+.sc-corners span:nth-child(4) { bottom:10px; right:10px; border-left:0;  border-top:0; }
+
+/* — Cyber horizontal scan lines — */
+.sc-cyber-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  border-radius: inherit;
+}
+.sc-cyber-lines span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(108,99,255,0.3), transparent);
+  transform: scaleX(0);
+}
+.sc-cyber-lines span:nth-child(1) { top:20%; transform-origin:left;  animation: scLineGrow 3s linear infinite 0s; }
+.sc-cyber-lines span:nth-child(2) { top:40%; transform-origin:right; animation: scLineGrow 3s linear infinite 1s; }
+.sc-cyber-lines span:nth-child(3) { top:60%; transform-origin:left;  animation: scLineGrow 3s linear infinite 2s; }
+.sc-cyber-lines span:nth-child(4) { top:80%; transform-origin:right; animation: scLineGrow 3s linear infinite 1.5s; }
+@keyframes scLineGrow {
+  0%   { transform: scaleX(0); opacity: 0; }
+  50%  { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0); opacity: 0; }
+}
+
+/* — Glowing orbs — */
+.sc-glowing-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.sc-glow-orb {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.sc-card:hover .sc-glow-orb { opacity: 1; }
+.sc-glow-orb:nth-child(1) {
+  top:-20px; left:-20px;
+  background: radial-gradient(circle, rgba(200,255,0,0.3) 0%, transparent 70%);
+}
+.sc-glow-orb:nth-child(2) {
+  top:50%; right:-25px; transform:translateY(-50%);
+  background: radial-gradient(circle, rgba(108,99,255,0.3) 0%, transparent 70%);
+}
+.sc-glow-orb:nth-child(3) {
+  bottom:-20px; left:30%;
+  background: radial-gradient(circle, rgba(6,182,212,0.3) 0%, transparent 70%);
+}
+
+/* — Floating particles — */
+.sc-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.sc-particles span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0;
+}
+.sc-card:hover .sc-particles span { animation: scParticleFloat 2s infinite; }
+.sc-particles span:nth-child(1) { background:#C8FF00; top:40%; left:20%;  --px:1;  --py:-1; }
+.sc-particles span:nth-child(2) { background:#6C63FF; top:60%; right:20%; --px:-1; --py:-1; }
+.sc-particles span:nth-child(3) { background:#06b6d4; top:20%; left:40%;  --px:.5; --py:1; }
+.sc-particles span:nth-child(4) { background:#C8FF00; top:80%; right:40%; --px:-.5;--py:1; }
+.sc-particles span:nth-child(5) { background:#6C63FF; top:30%; left:60%;  --px:1;  --py:.5; }
+.sc-particles span:nth-child(6) { background:#06b6d4; top:70%; right:60%; --px:-1; --py:.5; }
+@keyframes scParticleFloat {
+  0%   { transform: translate(0,0); opacity:0; }
+  50%  { opacity: 1; }
+  100% { transform: translate(calc(var(--px,0)*28px), calc(var(--py,0)*28px)); opacity:0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-scan-line, .sc-cyber-lines span, .sc-particles span { animation: none; }
+  .sc-card { transition: none; }
+}

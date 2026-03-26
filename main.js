@@ -492,7 +492,63 @@ document.addEventListener('DOMContentLoaded', () => {
   initSectionEffects();
   initFaqs();
   initImageFallbacks();
+  initSpeakerCardTilt();
 });
+
+/* ─────────────────────────────────────────
+   12. SPEAKER CARD — CYBER 3D TILT
+   Injects cyber visual elements + JS tilt on mousemove
+───────────────────────────────────────── */
+function initSpeakerCardTilt() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  document.querySelectorAll('.sc-card').forEach(card => {
+    // Inject cyber inner elements
+    card.insertAdjacentHTML('beforeend', `
+      <div class="sc-card-glare" aria-hidden="true"></div>
+      <div class="sc-scan-line" aria-hidden="true"></div>
+      <div class="sc-cyber-lines" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="sc-glowing-elements" aria-hidden="true">
+        <div class="sc-glow-orb"></div>
+        <div class="sc-glow-orb"></div>
+        <div class="sc-glow-orb"></div>
+      </div>
+      <div class="sc-particles" aria-hidden="true">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+      <div class="sc-corners" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    `);
+
+    // 3D tilt via mousemove
+    card.addEventListener('mouseenter', () => {
+      card.classList.add('tilting');
+    });
+
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotX = ((y - cy) / cy) * -15;
+      const rotY = ((x - cx) / cx) * 15;
+      card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('tilting');
+      card.style.transform = '';
+    });
+  });
+}
+
+
 
 /* ─────────────────────────────────────────
    11. IMAGE FALLBACK SPINNER
