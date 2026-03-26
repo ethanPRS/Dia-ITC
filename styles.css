@@ -1455,3 +1455,43 @@ a.nav__brand {
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
+
+/* ════════════════════════════════
+   LOADING SPINNER FALLBACK
+   Used when an image or element fails to load
+   ════════════════════════════════ */
+.img-spinner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 96px;
+  position: relative;
+  border-radius: inherit;
+}
+.img-spinner {
+  background-image: linear-gradient(rgb(108,99,255) 35%, rgb(6,182,212));
+  width: 56px;
+  height: 56px;
+  animation: spinnerRotate 1.7s linear infinite;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0 -5px 20px 0 rgb(108,99,255), 0 5px 20px 0 rgb(6,182,212);
+  position: relative;
+  z-index: 1;
+}
+.img-spinner-bg {
+  background-color: rgb(22,27,46);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  filter: blur(8px);
+  position: absolute;
+}
+@keyframes spinnerRotate {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .img-spinner { animation: none; }
+}

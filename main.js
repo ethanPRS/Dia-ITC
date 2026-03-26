@@ -491,4 +491,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initAgendaTabs();
   initSectionEffects();
   initFaqs();
+  initImageFallbacks();
 });
+
+/* ─────────────────────────────────────────
+   11. IMAGE FALLBACK SPINNER
+   Replaces broken images with the animated spinner
+───────────────────────────────────────── */
+function initImageFallbacks() {
+  const spinner = () => `
+    <div class="img-spinner-wrap" aria-hidden="true">
+      <div class="img-spinner-bg"></div>
+      <div class="img-spinner"></div>
+    </div>`;
+
+  document.querySelectorAll('img').forEach(img => {
+    // Already broken (e.g. img was in cache as error)
+    if (img.complete && img.naturalWidth === 0) {
+      replaceWithSpinner(img);
+    }
+    img.addEventListener('error', () => replaceWithSpinner(img), { once: true });
+  });
+
+  function replaceWithSpinner(img) {
+    const wrap = document.createElement('div');
+    wrap.innerHTML = spinner();
+    const el = wrap.firstElementChild;
+    el.style.width  = img.width  ? img.width  + 'px' : '96px';
+    el.style.height = img.height ? img.height + 'px' : '96px';
+    img.parentNode?.replaceChild(el, img);
+  }
+}
