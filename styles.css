@@ -2016,3 +2016,161 @@ a.nav__brand {
 @media (max-width: 480px) {
   .sp-card { width: 130px; height: 170px; }
 }
+
+/* ════════════════════════════════
+   STARFIELD BACKGROUND
+   3-layer CSS box-shadow stars — GPU accelerated
+   Replaces canvas particle system
+   ════════════════════════════════ */
+#starfield-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ── Layer 1: small, fast (50s) ── */
+#bg-stars {
+  width: 1px; height: 1px;
+  background: transparent;
+  animation: animStarUp 50s linear infinite;
+  box-shadow:
+    501px 811px rgba(255,255,255,0.8), 1450px 1324px rgba(200,255,0,0.6), 1093px 1780px rgba(255,255,255,0.8),
+    1469px 678px rgba(108,99,255,0.7), 904px 741px rgba(255,255,255,0.8), 1160px 781px rgba(6,182,212,0.6),
+    1841px 1962px rgba(255,255,255,0.8), 1630px 1667px rgba(200,255,0,0.5), 1788px 676px rgba(255,255,255,0.8),
+    367px 1734px rgba(108,99,255,0.6), 1343px 156px rgba(255,255,255,0.8), 1283px 1142px rgba(6,182,212,0.5),
+    1062px 378px rgba(255,255,255,0.8), 1395px 467px rgba(200,255,0,0.6), 1017px 1891px rgba(255,255,255,0.8),
+    137px 1114px rgba(255,255,255,0.7), 1767px 1403px rgba(108,99,255,0.5), 1543px 11px rgba(255,255,255,0.8),
+    1078px 181px rgba(6,182,212,0.6), 1189px 1574px rgba(255,255,255,0.8), 1697px 1551px rgba(255,255,255,0.7),
+    439px 472px rgba(200,255,0,0.5), 1491px 677px rgba(255,255,255,0.8), 1364px 599px rgba(108,99,255,0.6),
+    34px 382px rgba(255,255,255,0.8), 1221px 1584px rgba(255,255,255,0.7), 1266px 1499px rgba(6,182,212,0.5),
+    169px 1907px rgba(255,255,255,0.8), 1219px 1125px rgba(255,255,255,0.8), 659px 18px rgba(200,255,0,0.6),
+    1731px 1959px rgba(255,255,255,0.8), 332px 1216px rgba(108,99,255,0.5), 1913px 788px rgba(255,255,255,0.8),
+    80px 712px rgba(255,255,255,0.7), 326px 1605px rgba(6,182,212,0.6), 574px 1502px rgba(255,255,255,0.8),
+    473px 1653px rgba(255,255,255,0.8), 404px 975px rgba(200,255,0,0.5), 322px 1797px rgba(255,255,255,0.8),
+    425px 1321px rgba(108,99,255,0.6), 1121px 1797px rgba(255,255,255,0.8), 731px 647px rgba(255,255,255,0.7),
+    891px 1584px rgba(6,182,212,0.5), 1523px 109px rgba(255,255,255,0.8), 1379px 244px rgba(255,255,255,0.8),
+    865px 1064px rgba(200,255,0,0.6), 493px 956px rgba(255,255,255,0.8), 624px 1380px rgba(108,99,255,0.5),
+    440px 619px rgba(255,255,255,0.8), 1630px 767px rgba(255,255,255,0.7), 955px 1196px rgba(6,182,212,0.6),
+    62px 729px rgba(255,255,255,0.8), 126px 946px rgba(255,255,255,0.8), 1256px 896px rgba(200,255,0,0.5),
+    1444px 256px rgba(255,255,255,0.8), 661px 1628px rgba(108,99,255,0.6), 1078px 1716px rgba(255,255,255,0.8),
+    300px 737px rgba(255,255,255,0.7), 1734px 413px rgba(6,182,212,0.5), 1296px 129px rgba(255,255,255,0.8),
+    1771px 1678px rgba(255,255,255,0.8), 977px 1764px rgba(200,255,0,0.6), 1879px 549px rgba(255,255,255,0.8),
+    665px 1531px rgba(108,99,255,0.5), 89px 701px rgba(255,255,255,0.8), 1084px 1183px rgba(6,182,212,0.6),
+    1597px 1576px rgba(255,255,255,0.8), 1354px 1774px rgba(255,255,255,0.7), 554px 1471px rgba(200,255,0,0.5),
+    1469px 287px rgba(255,255,255,0.8), 887px 106px rgba(108,99,255,0.6), 1962px 766px rgba(255,255,255,0.8),
+    638px 805px rgba(255,255,255,0.7), 1651px 741px rgba(6,182,212,0.5), 1517px 1826px rgba(255,255,255,0.8),
+    24px 1152px rgba(255,255,255,0.8), 507px 558px rgba(200,255,0,0.6), 1262px 652px rgba(255,255,255,0.8),
+    246px 1048px rgba(108,99,255,0.5), 1077px 421px rgba(255,255,255,0.8), 1866px 1847px rgba(6,182,212,0.6),
+    1986px 1561px rgba(255,255,255,0.8), 704px 632px rgba(255,255,255,0.7), 1991px 1875px rgba(200,255,0,0.5),
+    1227px 395px rgba(255,255,255,0.8), 45px 1116px rgba(108,99,255,0.6), 247px 786px rgba(255,255,255,0.8),
+    890px 607px rgba(255,255,255,0.7), 787px 1235px rgba(6,182,212,0.5), 557px 524px rgba(255,255,255,0.8),
+    1582px 1285px rgba(255,255,255,0.8), 1725px 1366px rgba(200,255,0,0.6), 952px 747px rgba(255,255,255,0.8),
+    251px 458px rgba(108,99,255,0.5), 1500px 1250px rgba(255,255,255,0.8), 1999px 1734px rgba(6,182,212,0.6),
+    1336px 1955px rgba(255,255,255,0.8), 1705px 1464px rgba(255,255,255,0.7), 728px 697px rgba(200,255,0,0.5),
+    594px 510px rgba(255,255,255,0.8), 1345px 1990px rgba(108,99,255,0.6), 1919px 1803px rgba(255,255,255,0.8);
+}
+#bg-stars::after {
+  content:" "; position:absolute; top:2000px; width:1px; height:1px; background:transparent;
+  box-shadow: inherit;
+}
+
+/* ── Layer 2: medium, slower (100s) ── */
+#bg-stars2 {
+  width: 2px; height: 2px;
+  background: transparent;
+  animation: animStarUp 100s linear infinite;
+  box-shadow:
+    1925px 1320px rgba(255,255,255,0.7), 693px 1778px rgba(200,255,0,0.6), 1016px 711px rgba(255,255,255,0.7),
+    1171px 563px rgba(108,99,255,0.6), 661px 1919px rgba(255,255,255,0.7), 1610px 44px rgba(6,182,212,0.5),
+    1275px 140px rgba(255,255,255,0.7), 1208px 1802px rgba(200,255,0,0.5), 1473px 1587px rgba(255,255,255,0.7),
+    11px 1117px rgba(108,99,255,0.6), 853px 1757px rgba(255,255,255,0.7), 1149px 937px rgba(6,182,212,0.5),
+    1353px 428px rgba(255,255,255,0.7), 270px 279px rgba(200,255,0,0.6), 258px 1404px rgba(255,255,255,0.7),
+    417px 1188px rgba(108,99,255,0.5), 286px 561px rgba(255,255,255,0.7), 393px 1765px rgba(6,182,212,0.6),
+    147px 881px rgba(255,255,255,0.7), 666px 1097px rgba(200,255,0,0.5), 1425px 1278px rgba(255,255,255,0.7),
+    806px 156px rgba(108,99,255,0.6), 1252px 561px rgba(255,255,255,0.7), 218px 52px rgba(6,182,212,0.5),
+    1371px 1980px rgba(255,255,255,0.7), 171px 745px rgba(200,255,0,0.6), 1424px 89px rgba(255,255,255,0.7),
+    137px 244px rgba(108,99,255,0.5), 939px 1922px rgba(255,255,255,0.7), 137px 1080px rgba(6,182,212,0.6),
+    1757px 50px rgba(255,255,255,0.7), 904px 536px rgba(200,255,0,0.5), 1938px 1001px rgba(255,255,255,0.7),
+    1172px 440px rgba(108,99,255,0.6), 72px 1475px rgba(255,255,255,0.7), 102px 121px rgba(6,182,212,0.5),
+    804px 1671px rgba(255,255,255,0.7), 1314px 270px rgba(200,255,0,0.6), 440px 1341px rgba(255,255,255,0.7),
+    1216px 511px rgba(108,99,255,0.5), 1061px 1523px rgba(255,255,255,0.7), 97px 274px rgba(6,182,212,0.6),
+    704px 1318px rgba(255,255,255,0.7), 52px 1872px rgba(200,255,0,0.5), 1962px 296px rgba(255,255,255,0.7),
+    111px 289px rgba(108,99,255,0.6), 1157px 1236px rgba(255,255,255,0.7), 1347px 1451px rgba(6,182,212,0.5),
+    820px 286px rgba(255,255,255,0.7), 1389px 1169px rgba(200,255,0,0.6), 644px 841px rgba(255,255,255,0.7),
+    1286px 522px rgba(108,99,255,0.5), 955px 659px rgba(255,255,255,0.7), 428px 1805px rgba(6,182,212,0.6),
+    237px 557px rgba(255,255,255,0.7), 1689px 1058px rgba(200,255,0,0.5), 636px 1882px rgba(255,255,255,0.7),
+    1349px 1664px rgba(108,99,255,0.6), 1548px 432px rgba(255,255,255,0.7), 1841px 504px rgba(6,182,212,0.5);
+}
+#bg-stars2::after {
+  content:" "; position:absolute; top:2000px; width:2px; height:2px; background:transparent;
+  box-shadow: inherit;
+}
+
+/* ── Layer 3: large, slowest (150s) ── */
+#bg-stars3 {
+  width: 3px; height: 3px;
+  background: transparent;
+  animation: animStarUp 150s linear infinite;
+  box-shadow:
+    200px 981px rgba(200,255,0,0.6), 1731px 521px rgba(255,255,255,0.7), 132px 1039px rgba(108,99,255,0.6),
+    1888px 1547px rgba(255,255,255,0.7), 899px 1226px rgba(6,182,212,0.6), 1887px 580px rgba(255,255,255,0.7),
+    1548px 1092px rgba(200,255,0,0.5), 1626px 689px rgba(255,255,255,0.7), 254px 1072px rgba(108,99,255,0.5),
+    1684px 1211px rgba(255,255,255,0.7), 672px 1267px rgba(6,182,212,0.6), 939px 668px rgba(255,255,255,0.7),
+    1969px 645px rgba(200,255,0,0.6), 1126px 983px rgba(255,255,255,0.7), 457px 568px rgba(108,99,255,0.5),
+    476px 876px rgba(255,255,255,0.7), 829px 1896px rgba(6,182,212,0.6), 1364px 1846px rgba(255,255,255,0.7),
+    1507px 1120px rgba(200,255,0,0.5), 936px 1948px rgba(255,255,255,0.7), 1833px 832px rgba(108,99,255,0.6),
+    1424px 285px rgba(255,255,255,0.7), 1377px 1596px rgba(6,182,212,0.5), 432px 153px rgba(255,255,255,0.7),
+    1348px 1410px rgba(200,255,0,0.6), 1529px 954px rgba(255,255,255,0.7), 1102px 387px rgba(108,99,255,0.5),
+    264px 297px rgba(255,255,255,0.7), 811px 977px rgba(6,182,212,0.6), 1931px 673px rgba(255,255,255,0.7),
+    1734px 978px rgba(200,255,0,0.5), 1772px 1567px rgba(255,255,255,0.7), 1197px 1400px rgba(108,99,255,0.6),
+    764px 282px rgba(255,255,255,0.7), 1103px 822px rgba(6,182,212,0.5), 872px 1803px rgba(255,255,255,0.7),
+    1057px 1763px rgba(200,255,0,0.6), 52px 1299px rgba(255,255,255,0.7), 1312px 1236px rgba(108,99,255,0.5),
+    235px 1082px rgba(255,255,255,0.7), 299px 1086px rgba(6,182,212,0.6), 1017px 1602px rgba(255,255,255,0.7),
+    1950px 626px rgba(200,255,0,0.5), 1306px 132px rgba(255,255,255,0.7), 1358px 1618px rgba(108,99,255,0.6),
+    1873px 1718px rgba(255,255,255,0.7), 1447px 940px rgba(6,182,212,0.5), 1888px 1195px rgba(255,255,255,0.7),
+    1704px 1765px rgba(200,255,0,0.6), 872px 1357px rgba(255,255,255,0.7), 1555px 1120px rgba(108,99,255,0.5),
+    250px 1415px rgba(255,255,255,0.7), 450px 415px rgba(6,182,212,0.6), 492px 901px rgba(255,255,255,0.7),
+    170px 1641px rgba(200,255,0,0.5), 56px 1129px rgba(255,255,255,0.7), 627px 1514px rgba(108,99,255,0.6),
+    1221px 500px rgba(255,255,255,0.7), 324px 1895px rgba(6,182,212,0.5), 1397px 1775px rgba(255,255,255,0.7);
+}
+#bg-stars3::after {
+  content:" "; position:absolute; top:2000px; width:3px; height:3px; background:transparent;
+  box-shadow: inherit;
+}
+
+@keyframes animStarUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-2000px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #bg-stars, #bg-stars2, #bg-stars3 { animation-duration: 0.01ms; }
+}
+
+/* ════════════════════════════════
+   GOLDEN TICKET IMAGE — scale/blur hover
+   Adapted from uiverse.io/kamehame-ha
+   ════════════════════════════════ */
+.golden-ticket-img {
+  cursor: pointer;
+  transition: transform 400ms ease, filter 400ms ease;
+  border-radius: 12px;
+}
+.golden-ticket-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 24px rgba(255,210,119,0.7));
+}
+
+/* When the card is hovered but NOT the image, dim other sibling elements */
+.golden-ticket-card:hover > *:not(.golden-ticket-img):not(:hover) {
+  filter: blur(1.5px);
+  transform: scale(0.97);
+  transition: filter 400ms ease, transform 400ms ease;
+  opacity: 0.85;
+}
+/* Reset siblings when nothing is hovered */
+.golden-ticket-card > *:not(.golden-ticket-img) {
+  transition: filter 400ms ease, transform 400ms ease, opacity 400ms ease;
+}

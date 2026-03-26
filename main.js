@@ -48,95 +48,15 @@ function initIntro() {
    Fixed behind entire page — subtle dots only
 ───────────────────────────────────────── */
 function initGlobalParticles() {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'globalCanvas';
-  canvas.setAttribute('aria-hidden', 'true');
-  canvas.style.cssText = [
-    'position:fixed',
-    'inset:0',
-    'z-index:0',
-    'pointer-events:none',
-    'width:100%',
-    'height:100%',
-  ].join(';');
-  document.body.prepend(canvas);
-
-  const ctx = canvas.getContext('2d');
-  const TOTAL = 100;
-  let W, H, particles = [], raf;
-
-  const rand = (a, b) => a + Math.random() * (b - a);
-  const COLORS = [
-    'rgba(108,99,255,PAL)',
-    'rgba(200,255,0,PAL)',
-    'rgba(6,182,212,PAL)',
-  ];
-
-  class Dot {
-    constructor() { this.reset(); }
-    reset() {
-      this.x  = rand(0, W);
-      this.y  = rand(0, H);
-      this.vx = rand(-0.18, 0.18);
-      this.vy = rand(-0.18, 0.18);
-      this.r  = rand(0.8, 2.0);
-      const c = COLORS[Math.floor(Math.random() * COLORS.length)];
-      const a = rand(0.25, 0.55);
-      this.color = c.replace('PAL', a);
-    }
-    tick() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < -8) this.x = W + 8;
-      if (this.x > W + 8) this.x = -8;
-      if (this.y < -8) this.y = H + 8;
-      if (this.y > H + 8) this.y = -8;
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-  }
-
-  const resize = () => {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    if (!particles.length) particles = Array.from({ length: TOTAL }, () => new Dot());
-    else particles.forEach(p => { if (p.x > W) p.x = rand(0, W); if (p.y > H) p.y = rand(0, H); });
-  };
-
-  const connect = () => {
-    const MAX = 120;
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const d  = Math.sqrt(dx * dx + dy * dy);
-        if (d < MAX) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(108,99,255,${(1 - d / MAX) * 0.1})`;
-          ctx.lineWidth = 0.6;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-  };
-
-  const loop = () => {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => { p.tick(); p.draw(); });
-    connect();
-    raf = requestAnimationFrame(loop);
-  };
-
-  window.addEventListener('resize', resize, { passive: true });
-  resize();
-  loop();
+  // CSS starfield — 3 layers, GPU-accelerated, no JS repaint loop
+  const wrap = document.createElement('div');
+  wrap.id = 'starfield-bg';
+  wrap.setAttribute('aria-hidden', 'true');
+  wrap.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden';
+  wrap.innerHTML = `<div id="bg-stars"></div><div id="bg-stars2"></div><div id="bg-stars3"></div>`;
+  document.body.prepend(wrap);
 }
+
 
 /* ─────────────────────────────────────────
    3. HERO CANVAS — dense vivid particles
