@@ -1049,3 +1049,136 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     gap: 4px;
   }
 }
+
+/* ════════════════════════════════
+   GLOBAL OVERFLOW FIX — prevent horizontal scroll
+   ════════════════════════════════ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Nav menu — fully opaque dark background on mobile */
+@media (max-width: 768px) {
+  .nav__menu {
+    background: #0A0A0F !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    z-index: 999;
+  }
+}
+
+/* Nav brand as link */
+a.nav__brand {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+/* Speaker viewport — enable native touch swipe on mobile */
+.sc-viewport {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+.sc-viewport:active {
+  cursor: grabbing;
+}
+@media (max-width: 768px) {
+  .sc-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .sc-viewport::-webkit-scrollbar { display: none; }
+  .sc-track {
+    /* Allow native scroll instead of JS transform on mobile */
+    width: max-content;
+  }
+  .sc-card {
+    scroll-snap-align: center;
+    flex: 0 0 85vw;
+    max-width: 340px;
+  }
+}
+
+/* Golden ticket section */
+.golden-ticket-section {
+  padding-block: var(--space-10);
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,200,0,0.07) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.golden-ticket-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,200,0,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.golden-ticket-card {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  background: rgba(255,200,0,0.04);
+  border: 1px solid rgba(255,200,0,0.2);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+.golden-ticket-img {
+  width: min(320px, 80vw);
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(255,190,0,0.5)) drop-shadow(0 0 80px rgba(255,150,0,0.25));
+  animation: ticketFloat 4s ease-in-out infinite;
+}
+@keyframes ticketFloat {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-12px) rotate(1deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .golden-ticket-img { animation: none; }
+}
+.golden-ticket-question {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.golden-ticket-sub {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  line-height: 1.6;
+}
+.golden-ticket-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,200,0,0.1);
+  border: 1px solid rgba(255,200,0,0.3);
+  border-radius: var(--radius-full);
+  padding: 6px 18px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #FFD700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
