@@ -1368,3 +1368,90 @@ a.nav__brand {
   .sticky-glow-circle { animation: none; }
   .sticky-cta { animation: none; }
 }
+
+/* ════════════════════════════════
+   GOLDEN TICKET BUTTON — btn--golden
+   Adapted from uiverse.io/vinodjangid07
+   ════════════════════════════════ */
+.btn--golden {
+  width: auto;
+  min-width: 200px;
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  text-decoration: none;
+  padding: 0 2rem;
+}
+.btn--golden::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(10,10,15,0.92);
+  background-size: 200%;
+}
+.btn--golden span {
+  position: relative;
+  z-index: 2;
+  color: #ffd277;
+  font-weight: 700;
+  font-size: 1rem;
+  text-shadow: 0 0 8px rgba(255,210,119,0.6);
+  white-space: nowrap;
+}
+.btn--golden:hover {
+  background-position: right;
+  transition-duration: 1s;
+  box-shadow: 0 0 24px rgba(255,210,119,0.4);
+}
+.btn--golden:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+.btn--golden:active {
+  transform: scale(0.96);
+}
+
+/* ── Sticky CTA polish override ── */
+.sticky-cta {
+  height: 3.25rem;
+  min-width: 15rem;
+  padding: 0 2.5rem;
+  border-radius: 100px;
+  font-size: 1rem;
+}
+.sticky-cta strong {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(200,255,0,0.7), 0 0 2px rgba(200,255,0,0.4);
+}
+/* ── Golden ticket button polish override ── */
+.btn--golden {
+  height: 56px;
+  min-width: 240px;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(255,210,119,0.2), 0 8px 32px rgba(255,180,0,0.2);
+}
+.btn--golden span {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
