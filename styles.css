@@ -1872,3 +1872,9 @@ a.nav__brand {
   .sc-scan-line, .sc-cyber-lines span, .sc-particles span { animation: none; }
   .sc-card { transition: none; }
 }
+
+/* ── Remove glow-sweep animation from sc-card, keep only cyber tilt ── */
+.sc-card::before,
+.sc-card::after {
+  display: none !important;
+}
