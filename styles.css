@@ -1495,3 +1495,155 @@ a.nav__brand {
 @media (prefers-reduced-motion: reduce) {
   .img-spinner { animation: none; }
 }
+
+/* ════════════════════════════════
+   SPEAKER CARD — Glow Sweep Animation  
+   Adapted from uiverse.io/Pravins01
+   — colors: lime / purple / cyan
+   ════════════════════════════════ */
+.sc-card {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;  /* Let glow bleed outside the card */
+}
+
+/* Gradient border layer — sweeps on hover */
+.sc-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: calc(var(--radius-xl) + 4px);
+  background: linear-gradient(-45deg, #C8FF00 0%, #6C63FF 55%, #06b6d4 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.85;
+}
+
+/* Blurred glow layer underneath */
+.sc-card::after {
+  content: "";
+  z-index: -11;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #C8FF00 0%, #6C63FF 55%, #06b6d4 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(18px);
+  opacity: 0.6;
+  transition: filter 0.6s ease, opacity 0.6s ease;
+  border-radius: inherit;
+}
+
+/* Hover: glow intensifies, border sweeps */
+.sc-card:hover::after {
+  filter: blur(28px);
+  opacity: 0.8;
+}
+.sc-card:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  opacity: 1;
+}
+
+/* Active (selected) card — stronger glow */
+.sc-card.active::before {
+  opacity: 1;
+  background: linear-gradient(-45deg, #6C63FF 0%, #06b6d4 50%, #C8FF00 100%);
+}
+.sc-card.active::after {
+  filter: blur(32px);
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-card::before, .sc-card::after {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ── Sticky CTA — clean gradient border, no inner box hack ── */
+.sticky-cta {
+  /* Reset the problematic clip approach */
+  background-image: none !important;
+  background-clip: border-box !important;
+  background-origin: border-box !important;
+  background-color: #0D0D1A !important;
+  border: 2px solid transparent !important;
+  
+  /* Animated gradient border via pseudo-element instead */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: 15rem;
+  height: 3.25rem;
+  padding: 0 2.5rem;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  
+  /* gradient border using box-shadow */
+  box-shadow:
+    0 0 0 2px transparent,
+    0 0 20px rgba(200,255,0,0.3),
+    0 0 40px rgba(108,99,255,0.2);
+  
+  animation: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animated gradient border via ::before */
+.sticky-cta::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 100px;
+  background: linear-gradient(
+    137.48deg,
+    #C8FF00 0%,
+    #6C63FF 35%,
+    #06b6d4 60%,
+    #C8FF00 100%
+  );
+  background-size: 300% 300%;
+  animation: stickyBorderRotate 4s linear infinite;
+  z-index: -1;
+}
+/* Dark fill over gradient to show only as border */
+.sticky-cta::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 98px;
+  background: #0D0D1A;
+  z-index: -1;
+}
+
+@keyframes stickyBorderRotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sticky-cta:hover {
+  transform: translateX(-50%) scale(1.05) !important;
+  box-shadow:
+    0 0 24px rgba(200,255,0,0.5),
+    0 0 48px rgba(108,99,255,0.3);
+}
+
+/* Hide the stars/glow elements — not needed with this approach */
+.sticky-stars-container,
+.sticky-glow {
+  display: none;
+}
