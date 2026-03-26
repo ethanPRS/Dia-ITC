@@ -1237,3 +1237,134 @@ a.nav__brand {
     display: none;
   }
 }
+
+/* ════════════════════════════════
+   STICKY CTA — Space Button Design
+   Adapted from uiverse.io/StealthWorm
+   — colors: lime / cyan / purple palette
+   ════════════════════════════════ */
+.sticky-cta {
+  /* Override base styles */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 13rem;
+  height: 3rem;
+  padding: 0 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: stickyGradient 5s ease infinite;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#0A0A0F, #0A0A0F),
+    linear-gradient(137.48deg, #C8FF00 10%, #6C63FF 45%, #06b6d4 67%, #C8FF00 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: 300% 300%;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.sticky-cta strong {
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(200,255,0,0.9);
+  white-space: nowrap;
+}
+.sticky-cta:hover {
+  transform: translateX(-50%) scale(1.08);
+}
+.sticky-cta:hover .sticky-stars-container {
+  z-index: 1;
+  background-color: #0A0A0F;
+}
+
+/* Stars container */
+.sticky-stars-container {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 5rem;
+}
+.sticky-stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+.sticky-stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: stickyStarRotate 90s linear infinite;
+  background-image: radial-gradient(rgba(200,255,0,0.9) 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+.sticky-stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: stickyStarMove 60s linear infinite;
+  background-image: radial-gradient(rgba(108,99,255,0.8) 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+/* Glow orbs */
+.sticky-glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+.sticky-glow-circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: stickyPulse 4s infinite;
+  z-index: -1;
+}
+.sticky-glow-circle:nth-of-type(1) { background: rgba(200,255,0,0.5); }
+.sticky-glow-circle:nth-of-type(2) { background: rgba(108,99,255,0.6); }
+
+@keyframes stickyStarMove {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-135rem); }
+}
+@keyframes stickyStarRotate {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes stickyGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes stickyPulse {
+  0%   { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0,0,0,0.7); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+  100% { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-stars::before, .sticky-stars::after,
+  .sticky-glow-circle { animation: none; }
+  .sticky-cta { animation: none; }
+}
