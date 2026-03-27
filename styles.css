@@ -2398,3 +2398,17 @@ a.nav__brand {
 .btn--clean:active {
   transform: scale(0.97);
 }
+
+/* ── Agenda date pill — bigger, more prominent ── */
+.agenda-date-pill {
+  font-size: 1rem !important;
+  padding: 12px 28px !important;
+  letter-spacing: .18em !important;
+  border-color: rgba(200,255,0,0.35) !important;
+  color: var(--color-lime) !important;
+  box-shadow: 0 0 16px rgba(200,255,0,0.15);
+  gap: 12px !important;
+}
+.agenda-date-pill .ag-icon {
+  font-size: 1.2rem;
+}
