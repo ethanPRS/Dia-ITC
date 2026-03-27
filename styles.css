@@ -2369,3 +2369,15 @@ a.nav__brand {
   transform: scale(1.06) !important;
   box-shadow: 0 0 16px rgba(200,255,0,0.35) !important;
 }
+
+/* ── Golden ticket button — scale up on hover ── */
+.btn--golden {
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, background-position 1s ease;
+}
+.btn--golden:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 32px rgba(255,210,100,0.6), 0 8px 24px rgba(0,0,0,0.4);
+}
+.btn--golden:active {
+  transform: scale(0.97);
+}
