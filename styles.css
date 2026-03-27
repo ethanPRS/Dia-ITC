@@ -2563,3 +2563,112 @@ a.nav__brand {
     justify-content: center !important;
   }
 }
+
+/* ── Hero Title Animated Glowing Border ── */
+.hero-title-container {
+  position: relative;
+  display: inline-block;
+  margin: var(--space-4) auto;
+  z-index: 10;
+}
+.hero-title-container:hover .spin::before {
+  animation-play-state: running;
+}
+
+.button-border {
+  padding: 6px; /* border width */
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  border-radius: 40px; /* instead of clip-path */
+  position: relative;
+  z-index: 5;
+}
+
+.hero-title-inner {
+  justify-content: center;
+  align-items: center;
+  border-radius: 34px; 
+  background: #0A0A0F; /* Match hero bg so it covers the inner spin cleanly */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+.hero-title-inner .hero__title {
+  margin-bottom: 0; /* Override default margin inside the box */
+}
+
+/* Base spin layer */
+.hero-title-container .spin {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* behind the button-border */
+  opacity: 0.6;
+  overflow: hidden;
+  transition: opacity 0.3s;
+  border-radius: 40px;
+}
+.hero-title-container:hover .spin {
+  opacity: 1;
+}
+
+.spin-blur {
+  filter: blur(3em) url(#unopaq);
+  z-index: 0 !important;
+}
+.spin-intense {
+  inset: -0.5rem;
+  filter: blur(0.5em) url(#unopaq2);
+  border-radius: 50px;
+  z-index: 1 !important;
+}
+.button-border .spin-inside {
+  inset: -4px;
+  border-radius: inherit;
+  filter: blur(4px) url(#unopaq3);
+  z-index: 6 !important; /* inside the border but behind the inner box */
+  position: absolute;
+}
+
+.spin::before {
+  content: "";
+  position: absolute;
+  /* Make the gradient large enough to rotate and cover the corners of the wide box */
+  left: -100%; top: -100%; right: -100%; bottom: -100%;
+  animation:
+    speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite,
+    woah 4s infinite;
+  animation-play-state: paused;
+}
+
+/* User's original gradients but adapted for our lime/purple theme if desired, 
+   or keep user's original orange/blue gradients. The user provided orange/blue gradients. */
+.spin-blur::before {
+  background: linear-gradient(90deg, #f50 30%, #0000 50%, #05f 70%);
+}
+.spin-intense::before {
+  background: linear-gradient(90deg, #f95 20%, #0000 45% 55%, #59f 80%);
+}
+.spin-inside::before {
+  background: linear-gradient(90deg, #fc9 30%, #0000 45% 55%, #9cf 70%);
+}
+
+@keyframes speen {
+  0%   { transform: rotate(10deg); }
+  50%  { transform: rotate(190deg); }
+  100% { transform: rotate(370deg); }
+}
+
+@keyframes woah {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(0.75); }
+}
+
+/* Ensure mobile looks okay */
+@media (max-width: 768px) {
+  .hero-title-inner {
+    padding: 1rem 2rem;
+  }
+}
