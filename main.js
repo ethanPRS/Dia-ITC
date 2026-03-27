@@ -39,8 +39,8 @@ function initIntro() {
       document.documentElement.style.scrollBehavior = '';
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       triggerPageReveal();
-    }, 1300);
-  }, 1600);
+    }, 1800);
+  }, 2400);
 }
 
 /* ─────────────────────────────────────────
