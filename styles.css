@@ -119,17 +119,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 
 /* Expand phase */
-.intro-splash.expanding .intro-orb{
-  animation:orbExpand 1s cubic-bezier(0.76,0,0.24,1) forwards;
-  border-radius:50%;
+.intro-splash.expanding .intro-orb {
+  animation: orbExpand 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  will-change: transform, opacity;
+  box-shadow: none;
 }
-@keyframes orbExpand{
-  0%{transform:scale(1);border-radius:50%;opacity:1}
-  60%{transform:scale(4);border-radius:40%;opacity:1}
-  100%{transform:scale(20);border-radius:0%;opacity:0}
+.intro-splash.expanding .intro-orb::before {
+  display: none;
 }
-.intro-splash.expanding{animation:splashFade .4s ease .85s forwards}
-@keyframes splashFade{to{opacity:0;pointer-events:none}}
+.intro-splash.expanding .intro-orb-label,
+.intro-splash.expanding .intro-orb-title,
+.intro-splash.expanding .intro-orb-sub {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+@keyframes orbExpand {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(4); opacity: 1; }
+  100% { transform: scale(15); opacity: 0; }
+}
+.intro-splash.expanding { animation: splashFade 0.5s ease 0.4s forwards; pointer-events: none; }
+@keyframes splashFade { to { opacity: 0; visibility: hidden; } }
 
 /* ════════════════════════════════
    BUTTONS
@@ -2458,6 +2468,7 @@ a.nav__brand {
 .hero__title-dia, .hero__title-itc {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @keyframes introFadeUp {

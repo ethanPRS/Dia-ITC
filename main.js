@@ -39,6 +39,8 @@ function initIntro() {
       document.documentElement.style.scrollBehavior = '';
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       triggerPageReveal();
+      // Defer hero canvas to prevent stuttering during CSS intro
+      setTimeout(initHeroCanvas, 200);
     }, 1800);
   }, 2400);
 }
@@ -404,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initIntro();
   initGlobalParticles();
   initNav();
-  initHeroCanvas();
+  // initHeroCanvas(); deferred to initIntro to clear GPU queue for CSS
   initReveal();
   initCounters();
   initSpeakersCarousel();
