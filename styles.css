@@ -2563,3 +2563,31 @@ a.nav__brand {
     justify-content: center !important;
   }
 }
+
+/* ── Mobile Touch & Overflow Fixes ── */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+.sc-viewport {
+  touch-action: pan-y pinch-zoom;
+}
+.sc-track {
+  touch-action: pan-y pinch-zoom;
+}
+
+/* ── Mobile Nav Menu & Colaboradores Fix ── */
+@media (max-width: 768px) {
+  .nav__menu {
+    background-color: rgba(10, 10, 15, 0.98) !important; /* Solid dark background */
+    overflow-y: auto !important; /* Enable scrolling for elements that don't fit */
+    max-height: 100vh;
+    padding-bottom: 6rem !important; /* Extra padding so last items aren't cut off */
+  }
+}
+
+.colab-card__role {
+  color: #E2E8F0 !important; /* Bright gray for better legibility */
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
