@@ -1,0 +1,27 @@
+54dde65 release: v1.1.0 - optimized animations and analytics integration
+dcd6597 chore: include Vercel Analytics script for deployment
+211b9cf Version 23: Fixed mobile nav options appearing at the top of viewport and patched 100vw to 100% to prevent iOS horizontal zoom
+8501724 Version 22: Mobile UX and Accessibility Polish - Fixed speaker carousel right-swipe, prevented viewport zoom-out overflow bug, added solid background and scrolling to mobile nav menu, improved contrast for Colaboradores card text
+a35f183 Revert "Version 21: Hero title glowing animated border (SVG filters + spinning gradients)"
+318d2b7 Version 21: Hero title glowing animated border (SVG filters + spinning gradients)
+c84297f Version 20: Final polish - Navbar button fix, Location responsive fix, FAQ starry button alignment, Sponsor tiers standardized to Patrocinador Oficial, Timezone removal
+98a440f Version 19: Hero enhancements - DÍA ITC text hover animation, increased visibility for date badge and ticket price
+a8d8de1 Version 18: Agenda date pill más grande y visible (1rem, padding 12/28px, color lime)
+b43dde5 Version 17: FAQ Escríbenos btn — quita stars (visibles en reposo), usa hover limpio scale+glow; golden ticket btn scale spring
+e353af5 Version 16: Golden ticket btn scale-up on hover (spring cubic-bezier + glow)
+0dec687 Version 15: Sponsor Instagram CTA ahora usa btn--starry (igual que hero, estrellas lime)
+804e856 Version 14: Fix nav Registrarme button — usa ::before/::after para borde degradado (elimina caja forzada del background-clip)
+f69769d Version 13: Batch — Maps/FAQ/nav/sponsor btns star effect, gradient border nav btn, agenda blob animation, hide section numbers, remove GT blur, sticky mobile fix, nav mobile menu, smoother intro animation (2400ms+1800ms)
+33ae7b0 Version 12: Starfield CSS background (3 capas animadas lime/purple/cyan), golden ticket img scale/blur hover, sponsor cards rediseño, speaker cards cyber tilt
+4b53e99 Version 11: Sponsor cards rediseño — gradient glow border + dark overlay + logo slide-up + nombre reveal on hover, gradientes por marca (AZ/Hex/AWS/SAP/FEUDEM)
+8a5aaf1 Version 10: Quitar glow-sweep de speaker cards, mantener solo 3D tilt cyber
+ac54df5 Version 09: Speaker cards cyber 3D tilt (mousemove + perspective), scan lines, corner brackets, glow orbs, particles — colores lime/purple/cyan del sitio
+4a68f9f Sponsor/collab cards glow sweep animation
+d2350c8 Version 08: Speaker cards con glow sweep animation (lime/purple/cyan), sticky CTA rediseñado con borde degradado animado limpio (sin caja forzada)
+2db9d0a Version 07: Spinner fallback para imagenes rotas, boton golden ticket estilo dorado
+aed39e1 Version 06: Botones mejorados — golden ticket btn estilo dorado animado, sticky CTA polish (font, spacing, shadow)
+ba5cc77 Version 05: Sticky CTA con efecto space-button (estrellas animadas, borde degradado, glow orbitas lime/purple)
+5c47b3e Version 04: Boton CTA con estrellas animadas (star-burst design), seccion Boleto Dorado, FAQ boleto dorado, renombre tracks Cloud/Cyber/Incude, fix scroll horizontal movil, nav menu opaco, logo clickeable, swipe speakers movil
+7c6d0fc Version 03: Boleto Dorado section + FAQ, renombre tracks (Cloud/Cyber/Incude), fix horizontal scroll movil, nav menu opaque, logo clickeable, swipe speakers movil, nombre Alberto Trevino, FAQ escríbenos → Instagram, talleres sin conocimiento previo
+cba4d40 Version 02: Speakers reales con fotos, agenda con nombres confirmados, colaboradores UDEM actualizados (ACM, HERC, ERA, CPC), patrocinadores nuevos (AWS Club, SAP, FEUDEM), CTA de sponsor premium, precio de boleto $100 MXN con beneficios y rifa, correcciones mobile responsive, fix agenda filter por sala, scroll al inicio en animacion de entrada, LinkedIn removido, registro y Instagram SAITC actualizados
+ecb0f3f Version 01: Faltan fotos de speakers, fotos de patrocinadores y colaboradores
