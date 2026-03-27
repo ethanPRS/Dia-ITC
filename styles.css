@@ -2412,3 +2412,97 @@ a.nav__brand {
 .agenda-date-pill .ag-icon {
   font-size: 1.2rem;
 }
+
+/* ── Hero text adjustments requested by User ── */
+
+/* 1. Make hero__date-badge more visible */
+.hero__date-badge {
+  font-size: 1.25rem !important; /* was generic or small */
+  font-weight: 700 !important;
+  color: var(--color-lime) !important;
+  padding: 8px 16px !important;
+  border: 1px solid var(--color-lime) !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: 0 0 16px rgba(200,255,0,0.15) !important;
+}
+
+/* 2. Make hero__ticket-price more visible */
+.hero__ticket-price {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  background: rgba(108,99,255, 0.2) !important;
+  border: 1px solid var(--color-purple) !important;
+  padding: 12px 24px !important;
+  border-radius: 12px !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin-top: 10px !important;
+  box-shadow: 0 0 20px rgba(108,99,255,0.3) !important;
+}
+.hero__ticket-perks {
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: rgba(255,255,255,0.8) !important;
+  margin-top: 4px !important;
+}
+
+/* 3. DÍA ITC introFadeUp animation */
+.hero__title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: introFadeUp 1.2s ease-out forwards;
+  /* wait for splash screen to finish, assuming splash ends around 2.4s */
+  animation-delay: 2.5s; 
+}
+.hero__title-dia, .hero__title-itc {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes introFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero Title Hover Animation (Uiverse) ── */
+.ui-hover-btn {
+  --border-right: 8px;
+  --text-stroke-color: rgba(255,255,255,0.3);
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  display: inline-block;
+  cursor: default;
+}
+.hero__title-dia.ui-hover-btn { --animation-color: var(--color-lime); }
+.hero__title-itc.ui-hover-btn { --animation-color: #06b6d4; }
+
+.ui-hover-btn .actual-text {
+  display: inline-block;
+}
+
+.ui-hover-btn .hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  white-space: nowrap;
+}
+
+.ui-hover-btn:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 25px var(--animation-color));
+}
