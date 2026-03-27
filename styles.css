@@ -2338,3 +2338,34 @@ a.nav__brand {
   .btn--gradient-border { animation: none; }
   .intro-splash.expanding { animation: none !important; }
 }
+
+/* ── Nav gradient border button — fix inner box (use ::before/after like sticky) ── */
+.btn--gradient-border {
+  background-image: none !important;
+  background-clip: border-box !important;
+  background-color: transparent !important;
+  border: none !important;
+  animation: none !important;
+}
+.btn--gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 100px;
+  background: linear-gradient(137.48deg, #C8FF00 0%, #6C63FF 40%, #06b6d4 70%, #C8FF00 100%);
+  background-size: 300% 300%;
+  animation: stickyBorderRotate 4s linear infinite;
+  z-index: -1;
+}
+.btn--gradient-border::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 98px;
+  background: #0A0A0F;
+  z-index: -1;
+}
+.btn--gradient-border:hover {
+  transform: scale(1.06) !important;
+  box-shadow: 0 0 16px rgba(200,255,0,0.35) !important;
+}
