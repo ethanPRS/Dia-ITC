@@ -14,7 +14,7 @@ export default function Sponsors() {
 
           <div className="sp-grid reveal-up">
 
-            {/* Accenture */}
+            {/* Accenture — sin logo disponible */}
             <a href="https://www.accenture.com" target="_blank" rel="noopener noreferrer"
                className="sp-card sp-card--acc" aria-label="Accenture">
               <b></b>
@@ -30,7 +30,7 @@ export default function Sponsors() {
             <div className="sp-card sp-card--sap" aria-label="SAP">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.04em', color: '#008FD3'}}>SAP</span>
+                <img src="Sponsors/sap.webp" alt="SAP" loading="lazy" style={{width:'80%', objectFit:'contain', filter:'brightness(0) invert(1)'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">SAP<br/><span>Patrocinador Oficial</span></p>
@@ -42,7 +42,7 @@ export default function Sponsors() {
                className="sp-card sp-card--hex" aria-label="Hexaware Technologies">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.3rem', fontWeight: 900, letterSpacing: '0.02em', color: '#06b6d4'}}>HEXAWARE</span>
+                <img src="Sponsors/hexaware.svg" alt="Hexaware" loading="lazy" style={{width:'85%', objectFit:'contain'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">Hexaware<br/><span>Patrocinador Oficial</span></p>
@@ -54,7 +54,7 @@ export default function Sponsors() {
                className="sp-card sp-card--aws" aria-label="Club AWS UDEM">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#FF9900'}}>AWS</span>
+                <img src="Sponsors/aws.png" alt="AWS" loading="lazy" style={{width:'80%', objectFit:'contain'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">Club AWS<br/><span>Patrocinador Oficial</span></p>
@@ -66,7 +66,7 @@ export default function Sponsors() {
                className="sp-card sp-card--snow" aria-label="Snowflake">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#29ABE2'}}>Snowflake</span>
+                <img src="Sponsors/snowflake.svg" alt="Snowflake" loading="lazy" style={{width:'80%', objectFit:'contain'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">Snowflake<br/><span>Patrocinador Oficial</span></p>
@@ -77,7 +77,7 @@ export default function Sponsors() {
             <div className="sp-card sp-card--tota" aria-label="Doña Tota">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.1rem', fontWeight: 900, letterSpacing: '0.02em', color: '#F59E0B', textAlign: 'center', lineHeight: 1.2}}>Doña<br/>Tota</span>
+                <img src="Sponsors/dona-tota.webp" alt="Doña Tota" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">Doña Tota<br/><span>Patrocinador Oficial</span></p>
@@ -88,7 +88,7 @@ export default function Sponsors() {
             <div className="sp-card sp-card--offxile" aria-label="OFF-XILE">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.1rem', fontWeight: 900, letterSpacing: '0.06em', color: '#C8FF00', textAlign: 'center', lineHeight: 1.2}}>OFF-XILE</span>
+                <img src="Sponsors/offxile.jpg" alt="OFF-XILE" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">OFF-XILE<br/><span>Patrocinador Oficial</span></p>
@@ -195,32 +195,32 @@ export default function Sponsors() {
           <div className="colab-grid reveal-up">
 
             <div className="colab-card">
-              <div className="colab-card__img" aria-hidden="true">
-                <span style={{fontSize: '1.6rem', fontWeight: 800, letterSpacing: '-.02em', color: '#0078D4'}}>ACM</span>
+              <div className="colab-card__img">
+                <img src="Colaboradores/acm.jpg" alt="ACM UDEM" loading="lazy" />
               </div>
               <span className="colab-card__name">ACM — UDEM</span>
               <span className="colab-card__role">Association for Computing Machinery · UDEM</span>
             </div>
 
             <div className="colab-card">
-              <div className="colab-card__img" aria-hidden="true">
-                <span style={{fontSize: '1.6rem', fontWeight: 800, letterSpacing: '-.02em', color: '#E53935'}}>HERC</span>
+              <div className="colab-card__img">
+                <img src="Colaboradores/herc.jpg" alt="HERC UDEM" loading="lazy" />
               </div>
               <span className="colab-card__name">HERC UDEM</span>
               <span className="colab-card__role">Human Exploration Rover Challenge · UDEM</span>
             </div>
 
             <div className="colab-card">
-              <div className="colab-card__img" aria-hidden="true">
-                <span style={{fontSize: '1.6rem', fontWeight: 800, letterSpacing: '-.02em', color: 'var(--color-cyan)'}}>ERA</span>
+              <div className="colab-card__img">
+                <img src="Colaboradores/era.jpg" alt="ERA UDEM" loading="lazy" />
               </div>
               <span className="colab-card__name">ERA UDEM</span>
               <span className="colab-card__role">Engineering Research Association · UDEM</span>
             </div>
 
             <div className="colab-card">
-              <div className="colab-card__img" aria-hidden="true">
-                <span style={{fontSize: '1.1rem', fontWeight: 800, letterSpacing: '-.02em', color: 'var(--color-lime)', textAlign: 'center', lineHeight: 1.2}}>CPC</span>
+              <div className="colab-card__img">
+                <img src="Colaboradores/cpc.jpg" alt="CPC UDEM" loading="lazy" />
               </div>
               <span className="colab-card__name">Club de Prog. Competitiva</span>
               <span className="colab-card__role">Programación Competitiva · UDEM</span>
