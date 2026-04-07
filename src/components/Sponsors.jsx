@@ -99,22 +99,35 @@ export default function Sponsors() {
 
           {/* CTA para nuevos patrocinadores */}
           <div className="sp-cta-wrap reveal-up">
-            <p className="sp-cta-text">¿Tu empresa quiere ser patrocinadora del evento?</p>
-            <a
-              href="https://www.instagram.com/diaitc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn sp-cta-btn"
-              aria-label="Contáctanos en Instagram para ser patrocinador"
-              id="sponsorsInstagramCta"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-              </svg>
-              Contáctanos en Instagram
-            </a>
+            <div className="sp-cta-banner">
+              <div className="sp-cta-banner__glow" aria-hidden="true"></div>
+              <div className="sp-cta-banner__content">
+                <span className="sp-cta-banner__eyebrow">✦ ¿Quieres formar parte? ✦</span>
+                <h3 className="sp-cta-banner__title">
+                  Sé patrocinador del<br/>
+                  <span className="sp-cta-banner__title--accent">Día ITC 2026</span>
+                </h3>
+                <p className="sp-cta-banner__sub">
+                  Conecta tu marca con +250 estudiantes y profesionistas de tecnología.<br/>
+                  Escríbenos y hagámoslo juntos.
+                </p>
+                <a
+                  href="https://www.instagram.com/diaitc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sp-cta-banner__btn"
+                  aria-label="Contáctanos en Instagram para ser patrocinador"
+                  id="sponsorsInstagramCta"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                  Contáctanos en Instagram
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
