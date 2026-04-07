@@ -112,7 +112,7 @@ export default function Sponsors() {
                   Escríbenos y hagámoslo juntos.
                 </p>
                 <a
-                  href="https://www.instagram.com/diaitc/"
+                  href="https://www.instagram.com/saitcudem/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sp-cta-banner__btn"
