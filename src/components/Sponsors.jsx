@@ -14,12 +14,12 @@ export default function Sponsors() {
 
           <div className="sp-grid reveal-up">
 
-            {/* Accenture — sin logo disponible */}
+            {/* Accenture */}
             <a href="https://www.accenture.com" target="_blank" rel="noopener noreferrer"
                className="sp-card sp-card--acc" aria-label="Accenture">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.15rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#A100FF'}}>Accenture</span>
+                <img src="Sponsors/accenture.jpeg" alt="Accenture" loading="lazy" style={{width:'80%', objectFit:'contain'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">Accenture<br/><span>Patrocinador Oficial</span></p>
