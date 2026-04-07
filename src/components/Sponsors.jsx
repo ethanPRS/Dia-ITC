@@ -14,39 +14,15 @@ export default function Sponsors() {
 
           <div className="sp-grid reveal-up">
 
-            {/* AstraZeneca */}
-            <a href="https://www.astrazeneca.com" target="_blank" rel="noopener noreferrer"
-               className="sp-card sp-card--az" aria-label="AstraZeneca">
+            {/* Accenture */}
+            <a href="https://www.accenture.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--acc" aria-label="Accenture">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '2.4rem', fontWeight: 900, letterSpacing: '-0.04em', color: '#fff'}}>Az</span>
+                <span style={{fontSize: '1.15rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#A100FF'}}>Accenture</span>
               </div>
               <div className="sp-content">
-                <p className="sp-title">AstraZeneca<br/><span>Patrocinador Oficial</span></p>
-              </div>
-            </a>
-
-            {/* Hexaware */}
-            <a href="https://www.hexaware.com" target="_blank" rel="noopener noreferrer"
-               className="sp-card sp-card--hex" aria-label="Hexaware Technologies">
-              <b></b>
-              <div className="sp-card__logo">
-                <span style={{fontSize: '1.6rem', fontWeight: 900, letterSpacing: '0.02em', color: '#06b6d4'}}>HEXAWARE</span>
-              </div>
-              <div className="sp-content">
-                <p className="sp-title">Hexaware<br/><span>Patrocinador Oficial</span></p>
-              </div>
-            </a>
-
-            {/* Club AWS UDEM */}
-            <a href="https://www.instagram.com/aws.cloud.club.udem/" target="_blank" rel="noopener noreferrer"
-               className="sp-card sp-card--aws" aria-label="Club AWS UDEM">
-              <b></b>
-              <div className="sp-card__logo">
-                <span style={{fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#FF9900'}}>AWS</span>
-              </div>
-              <div className="sp-content">
-                <p className="sp-title">Club AWS<br/><span>Patrocinador Oficial</span></p>
+                <p className="sp-title">Accenture<br/><span>Patrocinador Oficial</span></p>
               </div>
             </a>
 
@@ -61,18 +37,86 @@ export default function Sponsors() {
               </div>
             </div>
 
-            {/* FEUDEM */}
-            <div className="sp-card sp-card--feudem" aria-label="FEUDEM">
+            {/* Hexaware */}
+            <a href="https://www.hexaware.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--hex" aria-label="Hexaware Technologies">
               <b></b>
               <div className="sp-card__logo">
-                <span style={{fontSize: '1.3rem', fontWeight: 900, letterSpacing: '0.02em', color: '#C8FF00'}}>FEUDEM</span>
+                <span style={{fontSize: '1.3rem', fontWeight: 900, letterSpacing: '0.02em', color: '#06b6d4'}}>HEXAWARE</span>
               </div>
               <div className="sp-content">
-                <p className="sp-title">FEUDEM<br/><span>Patrocinador Oficial</span></p>
+                <p className="sp-title">Hexaware<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
+            {/* AWS */}
+            <a href="https://www.instagram.com/aws.cloud.club.udem/" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--aws" aria-label="Club AWS UDEM">
+              <b></b>
+              <div className="sp-card__logo">
+                <span style={{fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#FF9900'}}>AWS</span>
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Club AWS<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
+            {/* Snowflake */}
+            <a href="https://www.snowflake.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--snow" aria-label="Snowflake">
+              <b></b>
+              <div className="sp-card__logo">
+                <span style={{fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#29ABE2'}}>Snowflake</span>
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Snowflake<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
+            {/* Doña Tota */}
+            <div className="sp-card sp-card--tota" aria-label="Doña Tota">
+              <b></b>
+              <div className="sp-card__logo">
+                <span style={{fontSize: '1.1rem', fontWeight: 900, letterSpacing: '0.02em', color: '#F59E0B', textAlign: 'center', lineHeight: 1.2}}>Doña<br/>Tota</span>
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Doña Tota<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </div>
+
+            {/* OFF-XILE */}
+            <div className="sp-card sp-card--offxile" aria-label="OFF-XILE">
+              <b></b>
+              <div className="sp-card__logo">
+                <span style={{fontSize: '1.1rem', fontWeight: 900, letterSpacing: '0.06em', color: '#C8FF00', textAlign: 'center', lineHeight: 1.2}}>OFF-XILE</span>
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">OFF-XILE<br/><span>Patrocinador Oficial</span></p>
               </div>
             </div>
 
           </div>
+
+          {/* CTA para nuevos patrocinadores */}
+          <div className="sp-cta-wrap reveal-up">
+            <p className="sp-cta-text">¿Tu empresa quiere ser patrocinadora del evento?</p>
+            <a
+              href="https://www.instagram.com/diaitc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn sp-cta-btn"
+              aria-label="Contáctanos en Instagram para ser patrocinador"
+              id="sponsorsInstagramCta"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              Contáctanos en Instagram
+            </a>
+          </div>
+
         </div>
       </section>
 

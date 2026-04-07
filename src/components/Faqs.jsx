@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const faqData = [
-  { q: '¿Cuánto cuesta el boleto y qué incluye?', a: <>El boleto tiene un costo de <strong>$100 MXN</strong> e incluye:<ul style={{marginTop:8, paddingLeft:'1.2em', display:'flex', flexDirection:'column', gap:4}}><li>🍽️ <strong>Comida y Catering</strong> del mediodía</li><li>🎤 <strong>Acceso a todas las sesiones</strong> y tracks simultáneos</li><li>🎁 <strong>Participación en la rifa de premios</strong> al cierre</li></ul></> },
+  { q: '¿Cuánto cuesta el boleto y qué incluye?', a: <><p>El boleto tiene las siguientes tarifas:</p><ul style={{marginTop:8, paddingLeft:'1.2em', display:'flex', flexDirection:'column', gap:6}}><li>🏷️ <strong>$80 MXN</strong> — precio anticipado <em>(antes del 21 de abril)</em></li><li>🗓️ <strong>$120 MXN</strong> — precio el mismo día del evento <em>(21 de abril)</em></li></ul><p style={{marginTop:10}}>Todos los boletos incluyen:</p><ul style={{marginTop:6, paddingLeft:'1.2em', display:'flex', flexDirection:'column', gap:4}}><li>🍽️ <strong>Comida y Catering</strong> del mediodía</li><li>🎤 <strong>Acceso a todas las sesiones</strong> y tracks simultáneos</li><li>🎁 <strong>Participación en la rifa de premios</strong> al cierre</li></ul></> },
   { q: '¿Quién puede asistir?', a: 'Principalmente estudiantes de ITC de UDEM, TEC de Monterrey y UANL. También hay espacio para invitados de otras instituciones.' },
   { q: '¿Necesito registrarme con anticipación?', a: 'Sí, los lugares son limitados a 250 participantes. Te recomendamos registrarte lo antes posible.' },
   { q: '¿Hay certificado de asistencia?', a: 'Esta información se confirmará próximamente. Los registrados recibirán actualizaciones por correo.' },

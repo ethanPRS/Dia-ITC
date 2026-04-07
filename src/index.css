@@ -1939,11 +1939,13 @@ a.nav__brand {
 .sp-card:hover::after  { filter: blur(40px) !important; }
 
 /* Per-sponsor gradient colors */
-.sp-card--az    { --sp-c1: #a0c4ff; --sp-c2: #6C63FF; }
-.sp-card--hex   { --sp-c1: #06b6d4; --sp-c2: #6C63FF; }
-.sp-card--aws   { --sp-c1: #FF9900; --sp-c2: #e65c00; }
-.sp-card--sap   { --sp-c1: #008FD3; --sp-c2: #0063a6; }
-.sp-card--feudem{ --sp-c1: #C8FF00; --sp-c2: #6C63FF; }
+.sp-card--acc    { --sp-c1: #A100FF; --sp-c2: #7B00CC; }
+.sp-card--sap    { --sp-c1: #008FD3; --sp-c2: #0063a6; }
+.sp-card--hex    { --sp-c1: #06b6d4; --sp-c2: #6C63FF; }
+.sp-card--aws    { --sp-c1: #FF9900; --sp-c2: #e65c00; }
+.sp-card--snow   { --sp-c1: #29ABE2; --sp-c2: #00d4fe; }
+.sp-card--tota   { --sp-c1: #F59E0B; --sp-c2: #d97706; }
+.sp-card--offxile{ --sp-c1: #C8FF00; --sp-c2: #6C63FF; }
 
 /* Dark inner overlay — key visual element */
 .sp-card > b {
@@ -2615,4 +2617,75 @@ html, body {
   .sticky-cta {
     width: calc(100% - 32px) !important; /* Replaced 100vw to prevent scroll offset overflow */
   }
+}
+
+/* ════════════════════════════════
+   SPONSORS — Instagram CTA button
+   ════════════════════════════════ */
+.sp-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.sp-cta-text {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-align: center;
+}
+
+.sp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #833ab4 0%, #c13584 40%, #e1306c 70%, #fd1d1d 100%);
+  background-size: 200% 200%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.3s ease,
+              background-position 0.6s ease;
+}
+
+.sp-cta-btn:hover {
+  background-position: 100% 0;
+  transform: scale(1.07);
+  box-shadow: 0 0 28px rgba(193,53,132,0.55), 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.sp-cta-btn:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-cta-btn { transition: none; }
+}
+
+/* ════════════════════════════════
+   HERO — Dynamic ticket price tag
+   ════════════════════════════════ */
+.hero__ticket-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.15em 0.55em;
+  border-radius: 100px;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(200,255,0,0.12);
+  color: var(--color-lime, #C8FF00);
+  border: 1px solid rgba(200,255,0,0.3);
+  vertical-align: middle;
 }
