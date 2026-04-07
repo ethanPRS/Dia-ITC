@@ -226,6 +226,14 @@ export default function Sponsors() {
               <span className="colab-card__role">Programación Competitiva · UDEM</span>
             </div>
 
+            <div className="colab-card">
+              <div className="colab-card__img">
+                <img src="Sponsors/aws.png" alt="Club AWS UDEM" loading="lazy" />
+              </div>
+              <span className="colab-card__name">Club AWS — UDEM</span>
+              <span className="colab-card__role">Amazon Web Services Cloud Club · UDEM</span>
+            </div>
+
           </div>
         </div>
       </section>
