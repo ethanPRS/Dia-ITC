@@ -39,8 +39,7 @@ export default function Faqs() {
               Un premio sorpresa aguarda al ganador… algo que no olvidarás. Como en la fábrica de Willy Wonka,
               el destino del premio es un secreto — solo el elegido lo descubrirá el día del evento. 🎩
             </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform"
-               target="_blank" rel="noopener noreferrer"
+            <a href="#registro"
                className="btn--golden"><span>🎟️ Regístrate y participa →</span></a>
           </div>
         </div>

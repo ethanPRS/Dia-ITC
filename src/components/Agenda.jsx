@@ -33,7 +33,7 @@ export default function Agenda() {
           <button className={`agenda-tab ${activeTab === 'main' ? 'active' : ''}`} onClick={() => setActiveTab('main')} role="tab" aria-selected={activeTab === 'main'}>Main Stage</button>
           <button className={`agenda-tab ${activeTab === 'sala-a' ? 'active' : ''}`} onClick={() => setActiveTab('sala-a')} role="tab" aria-selected={activeTab === 'sala-a'}>Cloud</button>
           <button className={`agenda-tab ${activeTab === 'sala-b' ? 'active' : ''}`} onClick={() => setActiveTab('sala-b')} role="tab" aria-selected={activeTab === 'sala-b'}>Cyber</button>
-          <button className={`agenda-tab ${activeTab === 'sala-c' ? 'active' : ''}`} onClick={() => setActiveTab('sala-c')} role="tab" aria-selected={activeTab === 'sala-c'}>Incude</button>
+          <button className={`agenda-tab ${activeTab === 'sala-c' ? 'active' : ''}`} onClick={() => setActiveTab('sala-c')} role="tab" aria-selected={activeTab === 'sala-c'}>Include</button>
         </div>
 
         <div className="ag-blob-wrapper">
@@ -82,7 +82,7 @@ export default function Agenda() {
                 <span className="ag-dur">50 min</span>
               </div>
               <div className="ag-row__speaker" role="cell">
-                <span className="ag-speaker-name">Alberto Treviño</span>
+                <span className="ag-speaker-name">Adrian Treviño</span>
                 <span className="ag-speaker-role">AstraZeneca</span>
               </div>
               <div className="ag-row__talk ag-row__talk--bold" role="cell">Charla Magistral de Apertura</div>
@@ -96,15 +96,15 @@ export default function Agenda() {
                 <div className="ag-block-tracks">
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
-                  <span className="agenda-tab-pill track-c">Incude</span>
-                  <span className="agenda-tab-pill track-main">Escenario — Proyectos Ing. Software</span>
+                  <span className="agenda-tab-pill track-c">Include</span>
+                  <span className="agenda-tab-pill track-main">Escenario — Ponencia de Proyectos</span>
                 </div>
               </div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-a', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">11:00</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Beatriz Barrera</span><span className="ag-speaker-role">IA / Cloud Specialist</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-a" style={{marginRight:8}}>Cloud</span>IA &amp; Cloud Computing — por confirmar tema</div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Vianey Elizondo / Eugenio Pérez</span><span className="ag-speaker-role">IA / Cloud</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-a" style={{marginRight:8}}>Cloud</span>IA &amp; Cloud Computing</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-b', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">11:00</span><span className="ag-dur">50 min</span></div>
@@ -113,13 +113,13 @@ export default function Agenda() {
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-c', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">11:00</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Karla Zapata</span><span className="ag-speaker-role">Inclusión &amp; Ética Tech</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Incude</span>Inclusión, Visibilidad y Ética Tecnológica</div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Sebastian Miranda</span><span className="ag-speaker-role">Tech Speaker</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>Inclusión, Visibilidad y Ética Tecnológica</div>
             </div>
             <div className={`ag-row ag-row--featured ${getVisibilityClass('main', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">11:00</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Alumnos ITC</span><span className="ag-speaker-role">Escenario Principal</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Presentación de Proyectos de Alumnos — Bloque 1</div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Ponencia de Proyectos — Bloque 1</div>
             </div>
 
             {/* ─── BLOQUE 2 — 12:00 ─── */}
@@ -130,24 +130,24 @@ export default function Agenda() {
                 <div className="ag-block-tracks">
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
-                  <span className="agenda-tab-pill track-c">Incude</span>
+                  <span className="agenda-tab-pill track-c">Include</span>
                 </div>
               </div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-a', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">12:00</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Mauro Delboy</span><span className="ag-speaker-role">ACM</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-a" style={{marginRight:8}}>Cloud</span>Tendencias en IA y Cloud Computing — ACM</div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Dr. Eduardo Emmanuel Rodríguez López</span><span className="ag-speaker-role">UDEM</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-a" style={{marginRight:8}}>Cloud</span>IA &amp; Cloud — Investigación y Sistemas Inteligentes</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-b', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">12:00</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Eli Emmanuel Ruiz Avilés</span><span className="ag-speaker-role">ACM</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-b" style={{marginRight:8}}>Cyber</span>DevOps &amp; CyberSec en entornos modernos — ACM</div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-b" style={{marginRight:8}}>Cyber</span>DevOps &amp; CyberSec en entornos modernos</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-c', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">12:00</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">IEEE WIE</span><span className="ag-speaker-role">Women in Engineering</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Incude</span>Visibilidad femenina en ingeniería y liderazgo tech</div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Cecilia Villarreal</span><span className="ag-speaker-role">WIE</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>Visibilidad femenina en ingeniería y liderazgo tech</div>
             </div>
 
             {/* Comida & Networking */}
@@ -165,8 +165,7 @@ export default function Agenda() {
                 <div className="ag-block-tracks">
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
-                  <span className="agenda-tab-pill track-c">Incude</span>
-                  <span className="agenda-tab-pill track-main">Escenario — Proyectos BDA</span>
+                  <span className="agenda-tab-pill track-c">Include</span>
                 </div>
               </div>
             </div>
@@ -178,17 +177,12 @@ export default function Agenda() {
             <div className={`ag-row ${getVisibilityClass('sala-b', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">14:30</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Pedro Arredondo</span><span className="ag-speaker-role">Accenture</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-b" style={{marginRight:8}}>Cyber</span>DevOps &amp; CyberSec en proyectos de transformación digital</div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-b" style={{marginRight:8}}>Cyber</span>Diseño 3D &amp; Creatividad en transformación digital</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-c', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">14:30</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Representante Hexaware</span><span className="ag-speaker-role">Hexaware Technologies</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Incude</span>Caso real: consultoría tecnológica y transformación digital</div>
-            </div>
-            <div className={`ag-row ag-row--featured ${getVisibilityClass('main', 'detail')}`} role="row">
-              <div className="ag-row__time" role="cell"><span className="ag-time">14:30</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Alumnos ITC</span><span className="ag-speaker-role">Escenario Principal</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Presentación de Proyectos de Alumnos — Bloque 2</div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Jairo De la Rosa</span><span className="ag-speaker-role">Hexaware</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>Empleabilidad &amp; Tech Careers</div>
             </div>
 
             {/* ─── BLOQUE 4 — 15:30 ─── */}
@@ -199,24 +193,30 @@ export default function Agenda() {
                 <div className="ag-block-tracks">
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
-                  <span className="agenda-tab-pill track-c">Incude</span>
+                  <span className="agenda-tab-pill track-c">Include</span>
+                  <span className="agenda-tab-pill track-main">Escenario — Ponencia de Proyectos</span>
                 </div>
               </div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-a', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Rodolfo Flores &amp; Ramiro Patiño</span><span className="ag-speaker-role">Snowflake</span></div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Rodolfo Flores / Ramiro Patiño</span><span className="ag-speaker-role">Snowflake</span></div>
               <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-a" style={{marginRight:8}}>Cloud</span>Panel: Futuro de la IA &amp; Data Platforms — Snowflake</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-b', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Ivan de Oca</span><span className="ag-speaker-role">SAP</span></div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Ivan Montes de Oca</span><span className="ag-speaker-role">SAP</span></div>
               <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-b" style={{marginRight:8}}>Cyber</span>Panel: Seguridad en entornos DevOps modernos — SAP</div>
             </div>
             <div className={`ag-row ${getVisibilityClass('sala-c', 'detail')}`} role="row">
               <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Erasmo Hernández</span><span className="ag-speaker-role">SAP</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Incude</span>Panel: Ética en IA, inclusión y trayectorias de carrera — SAP</div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>Panel: Ética en IA, inclusión y trayectorias de carrera</div>
+            </div>
+            <div className={`ag-row ag-row--featured ${getVisibilityClass('main', 'detail')}`} role="row">
+              <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Alumnos ITC</span><span className="ag-speaker-role">Escenario Principal</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Ponencia de Proyectos — Bloque 2</div>
             </div>
 
             {/* Cierre */}
