@@ -1091,7 +1091,6 @@ a.nav__brand {
 /* Speaker viewport — enable native touch swipe on mobile */
 .sc-viewport {
   touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
   cursor: grab;
 }
 .sc-viewport:active {

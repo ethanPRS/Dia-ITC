@@ -162,39 +162,69 @@ export default function Speakers() {
     };
   }, [update, resetAuto]);
 
-  // Pointer swipe logic
+  // Pointer swipe logic — only capture horizontal drags, let vertical page scroll through
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    let startX = 0;
+
+    let startX = null;
+    let startY = null;
     let dragging = false;
+    let directionLocked = false;
     let startOffset = 0;
 
     const onPointerDown = (e) => {
-      track.setPointerCapture(e.pointerId);
+      // Only respond to primary pointer (no multi-touch conflicts)
+      if (e.button !== 0) return;
       startX = e.clientX;
-      dragging = true;
+      startY = e.clientY;
+      dragging = false; // Will become true only if horizontal
+      directionLocked = false;
       startOffset = getOffset(current);
-      track.style.transition = 'none';
       clearTimeout(autoTimerRef.current);
     };
 
     const onPointerMove = (e) => {
-      if (!dragging) return;
+      if (startX === null) return;
       const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // Determine drag direction once we have enough movement
+      if (!directionLocked) {
+        if (Math.abs(dx) < 5 && Math.abs(dy) < 5) return; // Too small, wait
+        if (Math.abs(dy) > Math.abs(dx)) {
+          // Vertical scroll — release and let page scroll normally
+          startX = null;
+          startY = null;
+          return;
+        }
+        // Horizontal drag — lock and capture
+        directionLocked = true;
+        dragging = true;
+        track.setPointerCapture(e.pointerId);
+        track.style.transition = 'none';
+      }
+
+      if (!dragging) return;
+      e.preventDefault();
       track.style.transform = `translateX(-${startOffset - dx}px)`;
     };
 
     const onPointerUp = (e) => {
-      if (!dragging) return;
-      dragging = false;
-      track.style.transition = '';
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) > 60) {
-        setCurrent(prev => (prev + (dx < 0 ? 1 : -1) + total) % total);
-      } else {
-        update(); // snap back
+      if (startX === null && !dragging) return;
+      if (dragging) {
+        track.style.transition = '';
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 60) {
+          setCurrent(prev => (prev + (dx < 0 ? 1 : -1) + total) % total);
+        } else {
+          update(); // snap back
+        }
       }
+      startX = null;
+      startY = null;
+      dragging = false;
+      directionLocked = false;
       resetAuto();
     };
 
