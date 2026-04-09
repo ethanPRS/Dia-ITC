@@ -2111,6 +2111,7 @@ a.nav__brand {
 .sp-card--danu     { --sp-c1: #00B4D8; --sp-c2: #0077B6; }
 .sp-card--endava   { --sp-c1: #FF6B35; --sp-c2: #E63946; }
 .sp-card--softserve{ --sp-c1: #00C853; --sp-c2: #009624; }
+.sp-card--acm      { --sp-c1: #0088CC; --sp-c2: #00BFFF; }
 
 /* Dark inner overlay — key visual element */
 .sp-card > b {

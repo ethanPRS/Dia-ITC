@@ -153,6 +153,17 @@ export default function Sponsors() {
               </div>
             </a>
 
+            {/* ACM */}
+            <div className="sp-card sp-card--acm" aria-label="ACM">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/acm.jpg" alt="ACM" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">ACM<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </div>
+
           </div>
 
           {/* CTA para nuevos patrocinadores */}

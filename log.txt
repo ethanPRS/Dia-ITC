@@ -1,3 +1,4 @@
+HEAD fix: add missed ACM sponsor
 1addd29 fix: remove brightness filter from SAP logo to fix visibility
 4b978a7 Actualización del logo de SAP: se reemplaza SVG roto por PNG oficial y se actualiza Sponsors.jsx
 883bd52 feat: update event location, talk titles, implement featured keynote card and fix SAP logo path
