@@ -2106,6 +2106,11 @@ a.nav__brand {
 .sp-card--snow   { --sp-c1: #29ABE2; --sp-c2: #00d4fe; }
 .sp-card--tota   { --sp-c1: #F59E0B; --sp-c2: #d97706; }
 .sp-card--offxile{ --sp-c1: #C8FF00; --sp-c2: #6C63FF; }
+.sp-card--base     { --sp-c1: #003B71; --sp-c2: #0066CC; }
+.sp-card--cub      { --sp-c1: #1E90FF; --sp-c2: #0047AB; }
+.sp-card--danu     { --sp-c1: #00B4D8; --sp-c2: #0077B6; }
+.sp-card--endava   { --sp-c1: #FF6B35; --sp-c2: #E63946; }
+.sp-card--softserve{ --sp-c1: #00C853; --sp-c2: #009624; }
 
 /* Dark inner overlay — key visual element */
 .sp-card > b {

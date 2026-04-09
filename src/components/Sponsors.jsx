@@ -95,6 +95,64 @@ export default function Sponsors() {
               </div>
             </div>
 
+            {/* Banco Base */}
+            <a href="https://www.bancobase.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--base" aria-label="Banco Base">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/banco_base_logo.jpeg" alt="Banco Base" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Banco Base<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
+            {/* CUB Security */}
+            <div className="sp-card sp-card--cub" aria-label="CUB Security">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/cub_security_logo.jpeg" alt="CUB Security" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">CUB Security<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </div>
+
+            {/* Danuanalitica */}
+            <div className="sp-card sp-card--danu" aria-label="Danuanalitica">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/danuanalitica_logo.jpeg" alt="Danuanalitica" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Danuanalitica<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </div>
+
+            {/* Endava */}
+            <a href="https://www.endava.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--endava" aria-label="Endava">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/endava_logo.jpeg" alt="Endava" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">Endava<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
+            {/* SoftServe */}
+            <a href="https://www.softserveinc.com" target="_blank" rel="noopener noreferrer"
+               className="sp-card sp-card--softserve" aria-label="SoftServe">
+              <b></b>
+              <div className="sp-card__logo">
+                <img src="Sponsors/softserve_logo.jpeg" alt="SoftServe" loading="lazy" style={{width:'80%', objectFit:'contain', borderRadius: '8px'}} />
+              </div>
+              <div className="sp-content">
+                <p className="sp-title">SoftServe<br/><span>Patrocinador Oficial</span></p>
+              </div>
+            </a>
+
           </div>
 
           {/* CTA para nuevos patrocinadores */}

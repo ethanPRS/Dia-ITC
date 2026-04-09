@@ -1,4 +1,20 @@
-54dde65 release: v1.1.0 - optimized animations and analytics integration
+1addd29 fix: remove brightness filter from SAP logo to fix visibility
+4b978a7 Actualización del logo de SAP: se reemplaza SVG roto por PNG oficial y se actualiza Sponsors.jsx
+883bd52 feat: update event location, talk titles, implement featured keynote card and fix SAP logo path
+2494254 feat: add all missing speaker images and update data for jairo de la rosa
+e30739d update: add missing speaker images for eugenio, vianey, sebastian and javier
+3233592 feat: add document favicon
+562b7d4 fix: resolve double-scroll issue by detecting drag direction before capturing pointer events
+f3ae5f1 fix: update golden ticket btn href and refresh agenda with new speakers
+afc90d8 feat: add registration section for internal and external students and fix speakers track typo
+5c80c0d fix: actualizar link de Instagram en CTA de patrocinadores a @saitcudem
+6a59248 feat: conectar fotos reales a speakers
+0a2cc83 fix/feat: arreglar botón ubicación + rediseño banner CTA patrocinadores
+3e0b223 feat: agregar Club AWS UDEM en sección de colaboradores
+f181efb feat: agregar logo de Accenture en sección de patrocinadores
+7e9f2d5 feat: conectar logos reales en sponsors y colaboradores
+fa8c5ba feat: actualizar speakers, patrocinadores y precios de boleto
+54db57b v1.1.0: Migrate monolithic HTML/CSS/JS to modular React + Vite architecture
 dcd6597 chore: include Vercel Analytics script for deployment
 211b9cf Version 23: Fixed mobile nav options appearing at the top of viewport and patched 100vw to 100% to prevent iOS horizontal zoom
 8501724 Version 22: Mobile UX and Accessibility Polish - Fixed speaker carousel right-swipe, prevented viewport zoom-out overflow bug, added solid background and scrolling to mobile nav menu, improved contrast for Colaboradores card text
