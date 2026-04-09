@@ -30,7 +30,7 @@ export default function Sponsors() {
             <div className="sp-card sp-card--sap" aria-label="SAP">
               <b></b>
               <div className="sp-card__logo">
-                <img src="Sponsors/sap-logo-svg.svg" alt="SAP" loading="lazy" style={{width:'80%', objectFit:'contain', filter:'brightness(0) invert(1)'}} />
+                <img src="Sponsors/sap.png" alt="SAP" loading="lazy" style={{width:'80%', objectFit:'contain', filter:'brightness(0) invert(1)'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">SAP<br/><span>Patrocinador Oficial</span></p>
