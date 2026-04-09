@@ -87,29 +87,35 @@ function SpeakerCard({ speaker, index, isCurrent, onClick }) {
 const speakersData = [
   // 1 — Charla de Apertura
   { img: "Speakers/adrianTrevino.jpeg", name: "Alberto Adrián Treviño González", company: "AstraZeneca", role: "Industry Leader", bio: "Charla magistral de apertura. Perspectiva desde la industria farmacéutica-tecnológica y el impacto de la IA en sectores no tradicionales.", gradient: "linear-gradient(135deg,#6C63FF,#a855f7)", trackClass: "track-main", trackName: "Escenario Principal", talkIcon: "🎤", talkName: "Charla de Apertura" },
-  // 2 — Cloud Bloque 1
-  { initials: "VE", name: "Vianey Elizondo / Eugenio Pérez", company: "IA / Cloud", role: "Cloud & AI Specialists", bio: "Sesión sobre Inteligencia Artificial y Cloud Computing con perspectivas aplicadas desde la industria tecnológica.", gradient: "linear-gradient(135deg,#7C3AED,#06b6d4)", trackClass: "track-a", trackName: "Cloud — Bloque 1", talkIcon: "🤖", talkName: "IA & Cloud Track" },
-  // 3 — Cyber Bloque 1
+  // 2 — Cloud Bloque 1 (Eugenio)
+  { img: "Speakers/eugenioPerez.jpeg", name: "José Eugenio Pérez Fernández", company: "Danu", role: "Data Engineer Intern", bio: "Sesión sobre Inteligencia Artificial y Cloud Computing con perspectivas aplicadas desde la industria tecnológica.", gradient: "linear-gradient(135deg,#7C3AED,#06b6d4)", trackClass: "track-a", trackName: "Cloud — Bloque 1", talkIcon: "🤖", talkName: "IA & Cloud Track" },
+  // 3 — Cloud Bloque 1 (Vianey)
+  { img: "Speakers/vianeyMiriam.jpeg", name: "Vianey Mariam Elizondo", company: "Danu", role: "Estudiante de Economía", bio: "Sesión sobre Inteligencia Artificial y Cloud Computing con perspectivas aplicadas desde la industria tecnológica.", gradient: "linear-gradient(135deg,#db2777,#7C3AED)", trackClass: "track-a", trackName: "Cloud — Bloque 1", talkIcon: "🤖", talkName: "IA & Cloud Track" },
+  // 4 — Cyber Bloque 1
   { img: "Speakers/arturoGallart.jpeg", name: "Arturo Gallart", company: "Amazon Web Services (AWS)", role: "Cloud / Security Engineer", bio: "Especialista en seguridad y DevOps en AWS. Comparte casos reales de arquitecturas cloud seguras y buenas prácticas de ciberseguridad.", gradient: "linear-gradient(135deg,#FF9900,#e65c00)", trackClass: "track-b", trackName: "Cyber — Bloque 1", talkIcon: "🔐", talkName: "DevOps & CyberSec Track" },
-  // 4 — Include Bloque 1
-  { initials: "SM", name: "Sebastian Miranda", company: "Tech Industry", role: "Tech Speaker", bio: "Charla sobre tecnología, desarrollo profesional y cómo construir una carrera sólida en el sector tech.", gradient: "linear-gradient(135deg,#f59e0b,#ef4444)", trackClass: "track-c", trackName: "Include — Bloque 1", talkIcon: "⚖️", talkName: "Inclusión & Ética Track" },
-  // 5 — Cloud Bloque 2
+  // 5 — Include Bloque 1
+  { img: "Speakers/sebastianMiranda.jpeg", name: "Sebastian Miranda Forero", company: "Endava", role: "Country Manager", bio: "Charla sobre tecnología, desarrollo profesional y cómo construir una carrera sólida en el sector tech.", gradient: "linear-gradient(135deg,#f59e0b,#ef4444)", trackClass: "track-c", trackName: "Include — Bloque 1", talkIcon: "⚖️", talkName: "Inclusión & Ética Track" },
+  // 6 — Cloud Bloque 2
   { img: "Speakers/Eduardo Emmanuel.jpeg", name: "Dr. Eduardo Emmanuel Rodríguez López", company: "UDEM", role: "Full-Time Professor · PhD Applied Sciences & Tech", bio: "Profesor de tiempo completo en UDEM con doctorado en Ciencias y Tecnologías Aplicadas y maestría en Ciencias de la Computación. Investigación de frontera en IA y sistemas inteligentes.", gradient: "linear-gradient(135deg,#0078D4,#00c6ff)", trackClass: "track-a", trackName: "Cloud — Bloque 2", talkIcon: "🤖", talkName: "IA & Cloud Track" },
-  // 6 — Cyber Bloque 2
+  // 7 — Cyber Bloque 2
   { img: "Speakers/eliEmmanuel.jpeg", name: "Eli Emmanuel Ruiz Avilés", company: "ACM", role: "DevOps / CyberSec Expert", bio: "Experto en seguridad y operaciones DevOps. Casos prácticos y estrategias de defensa en entornos empresariales modernos.", gradient: "linear-gradient(135deg,#059669,#6C63FF)", trackClass: "track-b", trackName: "Cyber — Bloque 2", talkIcon: "🔐", talkName: "DevOps & CyberSec Track" },
-  // 7 — Include Bloque 2
+  // 8 — Include Bloque 2
   { img: "Speakers/ceciliavillarreal.jpeg", name: "Cecilia de la Paz Villarreal Cavazos", company: "IT Management & Delivery", role: "Deputy Director · IT Manager · Scrum Master · Technical Lead", bio: "Deputy Director of Development con experiencia como IT Manager, Scrum Master y Delivery Manager. Liderazgo femenino y gestión ágil en proyectos de tecnología.", gradient: "linear-gradient(135deg,#db2777,#9333ea)", trackClass: "track-c", trackName: "Include — Bloque 2", talkIcon: "⚖️", talkName: "Inclusión & Ética Track" },
-  // 8 — Cloud Bloque 3
+  // 9 — Cloud Bloque 3
   { img: "Speakers/santiagoReyes.jpeg", name: "Santiago Reyes Chávez", company: "SAP", role: "GCID AIOps Engineer (SRE) · MS Applied AI ITESM", bio: "AIOps Engineer en SAP con maestría en Inteligencia Artificial Aplicada del ITESM. Especialista en SRE, innovación y analítica avanzada de datos con enfoque en energías renovables.", gradient: "linear-gradient(135deg,#008FD3,#00C4CC)", trackClass: "track-a", trackName: "Cloud — Bloque 3", talkIcon: "🤖", talkName: "IA & Cloud Track" },
-  // 9 — Cyber Bloque 3
+  // 10 — Cyber Bloque 3
   { img: "Speakers/pedroArredondo.jpeg", name: "Pedro Arredondo", company: "Accenture", role: "Lead 3D Visual Designer", bio: "Lead 3D Visual Designer en Accenture. Diseño visual avanzado y creatividad tecnológica aplicada a grandes proyectos de transformación digital.", gradient: "linear-gradient(135deg,#a3335f,#6C63FF)", trackClass: "track-b", trackName: "Cyber — Bloque 3", talkIcon: "🎨", talkName: "Design & Tech Track" },
-  // 10 — Include Bloque 3
-  { initials: "JR", name: "Jairo De la Rosa", company: "Tech Industry", role: "Tech Speaker", bio: "Perspectivas sobre tecnología, empleabilidad y trayectorias de carrera en el sector tech para la próxima generación de ingenieros.", gradient: "linear-gradient(135deg,#06b6d4,#6C63FF)", trackClass: "track-c", trackName: "Include — Bloque 3", talkIcon: "💼", talkName: "Empleabilidad & Tech Careers" },
-  // 11 — Cloud Bloque 4
-  { img: "Speakers/rodolfoFlores.jpeg", name: "Rodolfo Flores / Ramiro Patiño", company: "Snowflake", role: "Senior Solution Engineer · Enterprise Account Executive", bio: "Panel de cierre sobre el futuro de la IA y el cómputo en la nube. Perspectiva desde Snowflake sobre data platforms, analítica moderna y The Data Cloud.", gradient: "linear-gradient(135deg,#00d4fe,#29ABE2)", trackClass: "track-a", trackName: "Cloud — Bloque 4", talkIcon: "🤖", talkName: "IA & Cloud — Panel Final" },
-  // 12 — Cyber Bloque 4
+  // 11 — Include Bloque 3
+  { initials: "JR", name: "Jairo de la Rosa", company: "Hexaware Technologies", role: "Service Delivery Director", bio: "Toma de decisiones bajo incertidumbre. Perspectivas sobre tecnología, empleabilidad y trayectorias de carrera en el sector tech.", gradient: "linear-gradient(135deg,#06b6d4,#6C63FF)", trackClass: "track-c", trackName: "Include — Bloque 3", talkIcon: "💼", talkName: "Empleabilidad & Tech Careers" },
+  // 12 — Cloud Bloque 4 (Rodolfo)
+  { img: "Speakers/rodolfoFlores.jpeg", name: "Rodolfo Flores", company: "Snowflake", role: "Senior Solution Engineer · Data Analytics & AI Solutions", bio: "Especialista en soluciones de datos y analítica avanzada. Perspectiva desde Snowflake sobre data platforms, analítica moderna y The Data Cloud.", gradient: "linear-gradient(135deg,#00d4fe,#29ABE2)", trackClass: "track-a", trackName: "Cloud — Bloque 4", talkIcon: "🤖", talkName: "IA & Cloud — Panel Final" },
+  // 13 — Cloud Bloque 4 (Ramiro)
+  { img: "Speakers/ramiroPatino.jpeg", name: "Ramiro Patiño", company: "Snowflake", role: "Enterprise Account Executive · The Data Cloud", bio: "Panel de cierre sobre el futuro de la IA y el cómputo en la nube. Perspectiva desde Snowflake sobre data platforms, analítica moderna y The Data Cloud.", gradient: "linear-gradient(135deg,#29ABE2,#0078D4)", trackClass: "track-a", trackName: "Cloud — Bloque 4", talkIcon: "🤖", talkName: "IA & Cloud — Panel Final" },
+  // 14 — Cloud Bloque 4 (Javier)
+  { img: "Speakers/javierRuiz.jpeg", name: "Javier Ruiz", company: "Snowflake", role: "Sales Engineering Manager · BI & Data Strategist", bio: "Sales Engineering Manager en Snowflake con amplia experiencia en Business Intelligence y estrategia de datos. Speaker en The BI Leadership Forum.", gradient: "linear-gradient(135deg,#00d4fe,#6C63FF)", trackClass: "track-a", trackName: "Cloud — Bloque 4", talkIcon: "🤖", talkName: "IA & Cloud — Panel Final" },
+  // 15 — Cyber Bloque 4
   { img: "Speakers/ivanMontes.jpeg", name: "Ivan F Montes de Oca T", company: "SAP", role: "DevOps Engineering · ITIL-ITSM · Data Science & Analytics", bio: "Especialista en DevOps con experiencia en ITIL-ITSM y Data Science. Panel de cierre sobre seguridad y operaciones en entornos DevOps modernos de alto impacto.", gradient: "linear-gradient(135deg,#008FD3,#003f7f)", trackClass: "track-b", trackName: "Cyber — Bloque 4", talkIcon: "🔐", talkName: "DevOps & CyberSec — Panel Final" },
-  // 13 — Include Bloque 4
+  // 16 — Include Bloque 4
   { img: "Speakers/erasmoHernandez.jpeg", name: "Erasmo Hernández", company: "Digital Transformation", role: "Senior Digital Transformation Advisor · Commercial Executive", bio: "Panel de cierre sobre transformación digital, ética en IA, inclusión y trayectorias de carrera. Visión estratégica y comercial de un senior advisor con amplia experiencia en la industria.", gradient: "linear-gradient(135deg,#f59e0b,#008FD3)", trackClass: "track-c", trackName: "Include — Bloque 4", talkIcon: "⚖️", talkName: "Inclusión & Ética — Panel Final" }
 ];
 
