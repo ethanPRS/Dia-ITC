@@ -83,11 +83,19 @@ function SpeakerCard({ speaker, index, isCurrent, onClick }) {
   );
 }
 
+// Keynote speaker — separate from carousel
+const keynote = {
+  img: "Speakers/adrianTrevino.jpeg",
+  name: "Alberto Adrián Treviño González",
+  company: "AstraZeneca",
+  role: "Industry Leader",
+  talkName: "Futuro Profesional en IT: De estudiante de ITC a Arquitecto del Futuro.",
+  bio: "Charla magistral de apertura. Perspectiva desde la industria farmacéutica-tecnológica y el impacto de la IA en sectores no tradicionales.",
+};
+
 // Data Array to keep JSX clean
 const speakersData = [
-  // 1 — Charla de Apertura
-  { img: "Speakers/adrianTrevino.jpeg", name: "Alberto Adrián Treviño González", company: "AstraZeneca", role: "Industry Leader", bio: "Charla magistral de apertura. Perspectiva desde la industria farmacéutica-tecnológica y el impacto de la IA en sectores no tradicionales.", gradient: "linear-gradient(135deg,#6C63FF,#a855f7)", trackClass: "track-main", trackName: "Escenario Principal", talkIcon: "🎤", talkName: "Charla de Apertura" },
-  // 2 — Cloud Bloque 1 (Eugenio)
+  // 1 — Cloud Bloque 1 (Eugenio)
   { img: "Speakers/eugenioPerez.jpeg", name: "José Eugenio Pérez Fernández", company: "Danu", role: "Data Engineer Intern", bio: "Sesión sobre Inteligencia Artificial y Cloud Computing con perspectivas aplicadas desde la industria tecnológica.", gradient: "linear-gradient(135deg,#7C3AED,#06b6d4)", trackClass: "track-a", trackName: "Cloud — Bloque 1", talkIcon: "🤖", talkName: "IA & Cloud Track" },
   // 3 — Cloud Bloque 1 (Vianey)
   { img: "Speakers/vianeyMiriam.jpeg", name: "Vianey Mariam Elizondo", company: "Danu", role: "Estudiante de Economía", bio: "Sesión sobre Inteligencia Artificial y Cloud Computing con perspectivas aplicadas desde la industria tecnológica.", gradient: "linear-gradient(135deg,#db2777,#7C3AED)", trackClass: "track-a", trackName: "Cloud — Bloque 1", talkIcon: "🤖", talkName: "IA & Cloud Track" },
@@ -255,6 +263,28 @@ export default function Speakers() {
           <h2 className="section-title" id="speakersHeading">Ponentes</h2>
           <p className="section-subtitle">Líderes de la industria tech compartiendo su visión del futuro.</p>
         </div>
+
+        {/* ── Keynote Featured Card ── */}
+        <article className="keynote-card reveal-up" id="keynoteCard">
+          <div className="keynote-card__glow" aria-hidden="true"></div>
+          <div className="keynote-card__inner">
+            <div className="keynote-card__avatar">
+              <img src={keynote.img} alt={keynote.name} loading="lazy" />
+              <div className="keynote-card__ring" aria-hidden="true"></div>
+            </div>
+            <div className="keynote-card__info">
+              <span className="keynote-card__badge">✨ Keynote Speaker</span>
+              <h3 className="keynote-card__name">{keynote.name}</h3>
+              <p className="keynote-card__company">{keynote.company} · {keynote.role}</p>
+              <p className="keynote-card__talk">
+                <span className="keynote-card__talk-icon">🎤</span>
+                {keynote.talkName}
+              </p>
+              <p className="keynote-card__bio">{keynote.bio}</p>
+              <a href="#agenda" className="btn btn--ghost btn--sm">Ver en agenda →</a>
+            </div>
+          </div>
+        </article>
       </div>
 
       <div className="sc-wrap reveal-up">

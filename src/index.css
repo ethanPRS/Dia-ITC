@@ -230,6 +230,157 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .registro-success h3{font-size:1.5rem;margin-bottom:var(--space-2);color:var(--color-lime)}
 
 /* ════════════════════════════════
+   KEYNOTE FEATURED CARD
+   ════════════════════════════════ */
+.keynote-card {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto var(--space-8);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  isolation: isolate;
+}
+.keynote-card__glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #C8FF00 0%, var(--color-accent) 40%, #a855f7 70%, #06b6d4 100%);
+  z-index: 0;
+  animation: keynoteGlow 4s ease-in-out infinite;
+}
+@keyframes keynoteGlow {
+  0%,100% { opacity: .55; filter: blur(0px) }
+  50%     { opacity: .85; filter: blur(2px) }
+}
+@media(prefers-reduced-motion: reduce) {
+  .keynote-card__glow { animation: none; opacity: .65 }
+}
+.keynote-card__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  border-radius: inherit;
+  background: rgba(22, 27, 46, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.keynote-card__avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+}
+.keynote-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  position: relative;
+  z-index: 1;
+}
+.keynote-card__ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: calc(var(--radius-lg) + 4px);
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #C8FF00, var(--color-accent), #a855f7) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: ringRotate 6s linear infinite;
+}
+@keyframes ringRotate {
+  to { filter: hue-rotate(360deg) }
+}
+@media(prefers-reduced-motion: reduce) {
+  .keynote-card__ring { animation: none }
+}
+.keynote-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+.keynote-card__badge {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #0A0A0F;
+  background: linear-gradient(135deg, #C8FF00, #f5d000);
+  border-radius: var(--radius-full);
+  padding: 4px 14px;
+}
+.keynote-card__name {
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  background: linear-gradient(135deg, #fff 40%, var(--color-lime));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.keynote-card__company {
+  font-size: .9rem;
+  color: var(--color-accent-light);
+  font-weight: 600;
+}
+.keynote-card__talk {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: .875rem;
+  color: var(--color-lime);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: var(--space-1);
+}
+.keynote-card__talk-icon { flex-shrink: 0 }
+.keynote-card__bio {
+  font-size: .82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-top: 2px;
+}
+.keynote-card__info .btn {
+  margin-top: var(--space-1);
+  align-self: flex-start;
+}
+
+/* Keynote responsive */
+@media(max-width: 600px) {
+  .keynote-card__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+  .keynote-card__avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .keynote-card__info {
+    align-items: center;
+  }
+  .keynote-card__talk {
+    justify-content: center;
+    text-align: center;
+  }
+  .keynote-card__info .btn {
+    align-self: center;
+  }
+}
+
+/* ════════════════════════════════
    SPEAKERS CAROUSEL
    ════════════════════════════════ */
 .speakers{overflow:hidden}

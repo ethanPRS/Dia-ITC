@@ -30,7 +30,7 @@ export default function Sponsors() {
             <div className="sp-card sp-card--sap" aria-label="SAP">
               <b></b>
               <div className="sp-card__logo">
-                <img src="Sponsors/sap.webp" alt="SAP" loading="lazy" style={{width:'80%', objectFit:'contain', filter:'brightness(0) invert(1)'}} />
+                <img src="Sponsors/sap-logo-svg.svg" alt="SAP" loading="lazy" style={{width:'80%', objectFit:'contain', filter:'brightness(0) invert(1)'}} />
               </div>
               <div className="sp-content">
                 <p className="sp-title">SAP<br/><span>Patrocinador Oficial</span></p>
@@ -146,7 +146,7 @@ export default function Sponsors() {
           <div className="ubicacion-layout reveal-up">
             {/* Circular map bubble */}
             <div className="ubicacion-globe-wrap">
-              <div className="ubicacion-venue-label" aria-hidden="true">UDEM — CAMPUS SAN PEDRO<br/>ESTOA NIVEL B, SALAS 7, 8 Y 9
+              <div className="ubicacion-venue-label" aria-hidden="true">UDEM — CAMPUS SAN PEDRO<br/>ESTOA NIVEL B, SALAS 5, 7, 8, 9 Y 10
               </div>
               <div className="ubicacion-globe">
                 <iframe className="ubicacion-iframe" title="Mapa UDEM Campus San Pedro" loading="lazy"
@@ -169,7 +169,7 @@ export default function Sponsors() {
                 <div>
                   <p className="ubicacion-info-label">Venue</p>
                   <p className="ubicacion-info-value">UDEM — ESTOA Nivel B</p>
-                  <p className="ubicacion-info-sub">Salas 7, 8 y 9</p>
+                  <p className="ubicacion-info-sub">Salas 5, 7, 8, 9 y 10</p>
                 </div>
               </div>
               <div className="ubicacion-info-row">

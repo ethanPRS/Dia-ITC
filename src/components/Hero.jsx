@@ -87,7 +87,7 @@ export default function Hero() {
         <p className="hero__tagline reveal-up">El futuro de la tecnología empieza aquí.</p>
         <p className="hero__meta reveal-up">
           <span className="hero__date-badge">21 de Abril · 8:30 AM–5 PM</span>
-          <span className="hero__location">ESTOA Nivel B, Salas 7, 8 y 9 · UDEM, San Pedro Garza García</span>
+          <span className="hero__location">ESTOA Nivel B, Salas 5, 7, 8, 9 y 10 · UDEM, San Pedro Garza García</span>
           <span className="hero__ticket-price" aria-label="Costo del boleto: $80 pesos mexicanos — precio anticipado">
             🎟️ Boleto <strong>$80 MXN</strong>
             <span className="hero__ticket-tag">precio anticipado</span>

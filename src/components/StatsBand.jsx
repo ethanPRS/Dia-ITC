@@ -43,12 +43,12 @@ export default function StatsBand() {
           <span className="stat-item__label">Lugares disponibles</span>
         </div>
         <div className="stat-item reveal-up">
-          <span className="stat-item__number" data-target="10">0</span>
+          <span className="stat-item__number" data-target="16">0</span>
           <span className="stat-item__label">Speakers</span>
         </div>
         <div className="stat-item reveal-up">
-          <span className="stat-item__number" data-target="4">0</span>
-          <span className="stat-item__label">Tracks simultáneos</span>
+          <span className="stat-item__number" data-target="13">0</span>
+          <span className="stat-item__label">Charlas</span>
         </div>
         <div className="stat-item reveal-up">
           <span className="stat-item__number" data-target="8">0</span>
