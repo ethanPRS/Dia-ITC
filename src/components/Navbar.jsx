@@ -38,7 +38,7 @@ export default function Navbar() {
         </button>
         <ul className={`nav__menu ${isOpen ? 'open' : ''}`} id="navMenu" role="list">
           <li>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer" className="nav__link" onClick={closeMenu}>Registro</a>
+            <a href="#registro" className="nav__link" onClick={closeMenu}>Registro</a>
           </li>
           <li><a href="#speakers" className="nav__link" onClick={closeMenu}>Speakers</a></li>
           <li><a href="#agenda" className="nav__link" onClick={closeMenu}>Agenda</a></li>
@@ -46,7 +46,7 @@ export default function Navbar() {
           <li><a href="#ubicacion" className="nav__link" onClick={closeMenu}>Ubicación</a></li>
           <li><a href="#faqs" className="nav__link" onClick={closeMenu}>FAQs</a></li>
           <li>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" target="_blank" rel="noopener noreferrer" className="btn--gradient-border nav__cta" onClick={closeMenu}>
+            <a href="#registro" className="btn--gradient-border nav__cta" onClick={closeMenu}>
               <strong>REGISTRARME</strong>
             </a>
           </li>
@@ -54,9 +54,7 @@ export default function Navbar() {
       </nav>
 
       <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeKawtS5thfRsITdo1GixjfXJAVAwKvEn2UldyQeDGq9feR-A/viewform" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+        href="#registro" 
         className="sticky-cta"
         id="stickyCTA" 
         aria-label="Registrarme en el evento"
