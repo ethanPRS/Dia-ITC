@@ -131,6 +131,7 @@ export default function Agenda() {
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
                   <span className="agenda-tab-pill track-c">Include</span>
+                  <span className="agenda-tab-pill track-main">Escenario — Ponencia de Proyectos</span>
                 </div>
               </div>
             </div>
@@ -148,6 +149,11 @@ export default function Agenda() {
               <div className="ag-row__time" role="cell"><span className="ag-time">12:00</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Cecilia Villarreal</span><span className="ag-speaker-role">WIE</span></div>
               <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>SheCodes()</div>
+            </div>
+            <div className={`ag-row ag-row--featured ${getVisibilityClass('main', 'detail')}`} role="row">
+              <div className="ag-row__time" role="cell"><span className="ag-time">12:00</span><span className="ag-dur">50 min</span></div>
+              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Alumnos ITC</span><span className="ag-speaker-role">Escenario Principal</span></div>
+              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Ponencia de Proyectos — Bloque 2</div>
             </div>
 
             {/* Comida & Networking */}
@@ -194,7 +200,6 @@ export default function Agenda() {
                   <span className="agenda-tab-pill track-a">Cloud</span>
                   <span className="agenda-tab-pill track-b">Cyber</span>
                   <span className="agenda-tab-pill track-c">Include</span>
-                  <span className="agenda-tab-pill track-main">Escenario — Ponencia de Proyectos</span>
                 </div>
               </div>
             </div>
@@ -212,11 +217,6 @@ export default function Agenda() {
               <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
               <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Erasmo Hernández</span><span className="ag-speaker-role">SAP</span></div>
               <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-c" style={{marginRight:8}}>Include</span>¿Qué significa hacer lo correcto en los negocios? De la filosofía al impacto financiero</div>
-            </div>
-            <div className={`ag-row ag-row--featured ${getVisibilityClass('main', 'detail')}`} role="row">
-              <div className="ag-row__time" role="cell"><span className="ag-time">15:30</span><span className="ag-dur">50 min</span></div>
-              <div className="ag-row__speaker" role="cell"><span className="ag-speaker-name">Alumnos ITC</span><span className="ag-speaker-role">Escenario Principal</span></div>
-              <div className="ag-row__talk" role="cell"><span className="agenda-tab-pill track-main" style={{marginRight:8}}>Main Stage</span>🎓 Ponencia de Proyectos — Bloque 2</div>
             </div>
 
             {/* Cierre */}
