@@ -179,6 +179,63 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero__title-year{color:var(--color-lime);text-shadow:0 0 40px var(--color-lime-glow);-webkit-text-stroke:2px var(--color-lime);color:transparent}
 .pixel-checker{display:inline-block;width:clamp(40px,8vw,80px);height:clamp(40px,8vw,80px);background-image:linear-gradient(45deg,#fff 25%,transparent 25%),linear-gradient(-45deg,#fff 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#fff 75%),linear-gradient(-45deg,transparent 75%,#fff 75%);background-size:calc(clamp(40px,8vw,80px)/4) calc(clamp(40px,8vw,80px)/4);background-position:0 0,0 50%,50% -50%,-50% 0;opacity:.85;flex-shrink:0}
 .hero__tagline{font-size:clamp(1.1rem,3vw,1.4rem);font-weight:500;color:var(--color-text-secondary);margin-bottom:var(--space-3)}
+
+/* ── Countdown ── */
+.hero__countdown{
+  display:flex;flex-direction:column;align-items:center;gap:var(--space-2);
+  margin-bottom:var(--space-4);
+  animation:cdEnter .6s ease both;
+  animation-delay:.4s;
+}
+@keyframes cdEnter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.hero__countdown{animation:none}}
+.hero__countdown-label{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--color-accent-light);
+}
+.hero__countdown-units{
+  display:flex;align-items:center;gap:var(--space-2);flex-wrap:wrap;justify-content:center;
+}
+.hero__countdown-unit{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  position:relative;
+}
+.hero__countdown-unit:not(:last-child)::after{
+  content:':';
+  position:absolute;right:calc(-1 * var(--space-2) / 2 - 7px);top:8px;
+  font-family:var(--font-mono);font-size:1.5rem;font-weight:700;
+  color:var(--color-accent);opacity:.6;
+  line-height:1;
+}
+.hero__countdown-number{
+  display:flex;align-items:center;justify-content:center;
+  width:72px;height:72px;
+  font-family:var(--font-mono);font-size:2rem;font-weight:700;
+  color:var(--color-text-primary);
+  background:rgba(108,99,255,.1);
+  border:1px solid rgba(108,99,255,.3);
+  border-radius:var(--radius-md);
+  box-shadow:0 0 20px rgba(108,99,255,.12),inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.hero__countdown-unit:hover .hero__countdown-number{
+  transform:translateY(-2px);
+  box-shadow:0 0 32px rgba(108,99,255,.3),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.hero__countdown-name{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;
+  color:var(--color-text-muted);text-transform:uppercase;
+}
+.hero__countdown-done{
+  font-size:1.1rem;font-weight:700;
+  color:var(--color-lime);
+  text-shadow:0 0 20px var(--color-lime-glow);
+}
+@media(max-width:480px){
+  .hero__countdown-number{width:58px;height:58px;font-size:1.55rem}
+  .hero__countdown-units{gap:var(--space-1)}
+}
 .hero__meta{display:flex;flex-direction:column;align-items:center;gap:var(--space-1);margin-bottom:var(--space-4)}
 .hero__date-badge{display:inline-block;font-family:var(--font-mono);font-size:.9rem;font-weight:700;color:var(--color-lime);background:rgba(200,255,0,.08);border:1px solid rgba(200,255,0,.3);border-radius:var(--radius-full);padding:4px 20px}
 .hero__location{font-size:.875rem;color:var(--color-text-secondary)}

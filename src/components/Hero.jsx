@@ -1,7 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+const TARGET_DATE = new Date('2026-04-21T09:00:00');
+
+function getTimeLeft() {
+  const diff = TARGET_DATE - Date.now();
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, done: true };
+  const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours   = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+  return { days, hours, minutes, seconds, done: false };
+}
 
 export default function Hero() {
   const canvasRef = useRef(null);
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -73,6 +86,16 @@ export default function Hero() {
     };
   }, []);
 
+  useEffect(() => {
+    if (timeLeft.done) return;
+    const id = setInterval(() => {
+      const t = getTimeLeft();
+      setTimeLeft(t);
+      if (t.done) clearInterval(id);
+    }, 1000);
+    return () => clearInterval(id);
+  }, [timeLeft.done]);
+
   return (
     <section className="hero" id="hero" aria-labelledby="heroHeadline">
       <canvas className="hero__canvas" id="heroCanvas" aria-hidden="true" ref={canvasRef}></canvas>
@@ -85,6 +108,27 @@ export default function Hero() {
           <span className="hero__title-year">2026</span>
         </h1>
         <p className="hero__tagline reveal-up">El futuro de la tecnología empieza aquí.</p>
+
+        {/* ── Countdown ── */}
+        <div className="hero__countdown reveal-up" role="timer" aria-live="polite" aria-label="Tiempo restante para el evento">
+          <p className="hero__countdown-label">El evento comienza en</p>
+          <div className="hero__countdown-units">
+            {[{ v: timeLeft.days,    l: 'Días' },
+              { v: timeLeft.hours,   l: 'Horas' },
+              { v: timeLeft.minutes, l: 'Min' },
+              { v: timeLeft.seconds, l: 'Seg' }].map(({ v, l }) => (
+              <div className="hero__countdown-unit" key={l}>
+                <span className="hero__countdown-number" aria-label={`${v} ${l}`}>
+                  {String(v).padStart(2, '0')}
+                </span>
+                <span className="hero__countdown-name">{l}</span>
+              </div>
+            ))}
+          </div>
+          {timeLeft.done && (
+            <p className="hero__countdown-done">🎉 ¡El evento ha comenzado!</p>
+          )}
+        </div>
         <p className="hero__meta reveal-up">
           <span className="hero__date-badge">21 de Abril · 8:30 AM–5 PM</span>
           <span className="hero__location">ESTOA Nivel B, Salas 5, 7, 8, 9 y 10 · UDEM, San Pedro Garza García</span>
